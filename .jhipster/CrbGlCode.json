@@ -1,5 +1,6 @@
 {
   "changelogDate": "20230914085031",
+  "clientRootFolder": "gdi",
   "dto": "mapstruct",
   "fields": [
     {

@@ -1,0 +1,74 @@
+{
+  "changelogDate": "20231004091106",
+  "clientRootFolder": "gdi-data",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "reportingDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountContractNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength", "pattern"],
+      "fieldValidateRulesMaxlength": "16",
+      "fieldValidateRulesMinlength": "12",
+      "fieldValidateRulesPattern": "^\\d{15}$"
+    },
+    {
+      "fieldName": "accruedInterestBalanceFCY",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accruedInterestBalanceLCY",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountBalanceFCY",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountBalanceLCY",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "incrementalChangelog": false,
+  "jpaMetamodelFiltering": true,
+  "name": "AccountBalance",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "institutionName",
+      "otherEntityName": "institutionCode",
+      "relationshipName": "bankCode",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "branchCode",
+      "otherEntityName": "bankBranchCode",
+      "relationshipName": "branchId",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "alphabeticCode",
+      "otherEntityName": "isoCurrencyCode",
+      "relationshipName": "currencyCode",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    }
+  ],
+  "service": "serviceImpl"
+}

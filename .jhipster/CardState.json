@@ -1,0 +1,29 @@
+{
+  "changelogDate": "20231004131702",
+  "clientRootFolder": "gdi-data",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "cardStateFlag",
+      "fieldType": "CardStateFlagTypes",
+      "fieldValidateRules": ["required", "unique"],
+      "fieldValues": "P,V"
+    },
+    {
+      "fieldName": "cardStateFlagDetails",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cardStateFlagDescription",
+      "fieldType": "String"
+    }
+  ],
+  "incrementalChangelog": false,
+  "jpaMetamodelFiltering": true,
+  "name": "CardState",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

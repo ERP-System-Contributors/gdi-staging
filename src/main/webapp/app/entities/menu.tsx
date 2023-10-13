@@ -9,6 +9,75 @@ const EntitiesMenu = () => {
       <MenuItem icon="asterisk" to="/placeholder">
         Placeholder
       </MenuItem>
+      <MenuItem icon="asterisk" to="/fixed-asset-acquisition">
+        Fixed Asset Acquisition
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/fixed-asset-net-book-value">
+        Fixed Asset Net Book Value
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/fixed-asset-depreciation">
+        Fixed Asset Depreciation
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/file-type">
+        File Type
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/file-upload">
+        File Upload
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/message-token">
+        Message Token
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/invoice">
+        Invoice
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/payment">
+        Payment
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/dealer">
+        Dealer
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/payment-calculation">
+        Payment Calculation
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/payment-requisition">
+        Payment Requisition
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/tax-reference">
+        Tax Reference
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/tax-rule">
+        Tax Rule
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/payment-category">
+        Payment Category
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/payment-label">
+        Payment Label
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/signed-payment">
+        Signed Payment
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/settlement-currency">
+        Settlement Currency
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/purchase-order">
+        Purchase Order
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/payment-invoice">
+        Payment Invoice
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/settlement">
+        Settlement
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/agency-notice">
+        Agency Notice
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/depreciation-method">
+        Depreciation Method
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/asset-category">
+        Asset Category
+      </MenuItem>
       <MenuItem icon="asterisk" to="/bank-branch-code">
         Bank Branch Code
       </MenuItem>
@@ -23,6 +92,18 @@ const EntitiesMenu = () => {
       </MenuItem>
       <MenuItem icon="asterisk" to="/service-outlet">
         Service Outlet
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/business-stamp">
+        Business Stamp
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/delivery-note">
+        Delivery Note
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/job-sheet">
+        Job Sheet
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/credit-note">
+        Credit Note
       </MenuItem>
       <MenuItem icon="asterisk" to="/customer-id-document-type">
         Customer ID Document Type
@@ -39,8 +120,140 @@ const EntitiesMenu = () => {
       <MenuItem icon="asterisk" to="/sub-county-code">
         Sub County Code
       </MenuItem>
+      <MenuItem icon="asterisk" to="/asset-registration">
+        Asset Registration
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/work-in-progress-registration">
+        Work In Progress Registration
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/work-in-progress-transfer">
+        Work In Progress Transfer
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/work-project-register">
+        Work Project Register
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/transaction-account">
+        Transaction Account
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/prepayment-account">
+        Prepayment Account
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/prepayment-marshalling">
+        Prepayment Marshalling
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/prepayment-amortization">
+        Prepayment Amortization
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/report-template">
+        Report Template
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/pdf-report-requisition">
+        Pdf Report Requisition
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/xlsx-report-requisition">
+        Xlsx Report Requisition
+      </MenuItem>
       <MenuItem icon="asterisk" to="/universally-unique-mapping">
         Universally Unique Mapping
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/report-requisition">
+        Report Requisition
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/system-content-type">
+        System Content Type
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/report-content-type">
+        Report Content Type
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/excel-report-export">
+        Excel Report Export
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/process-status">
+        Process Status
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/report-status">
+        Report Status
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/algorithm">
+        Algorithm
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/security-clearance">
+        Security Clearance
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/application-user">
+        Application User
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/report-design">
+        Report Design
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/system-module">
+        System Module
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/prepayment-mapping">
+        Prepayment Mapping
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/amortization-recurrence">
+        Amortization Recurrence
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/amortization-sequence">
+        Amortization Sequence
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/question-base">
+        Question Base
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/business-document">
+        Business Document
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/settlement-requisition">
+        Settlement Requisition
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/string-question-base">
+        String Question Base
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/lease-contract">
+        Lease Contract
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/contract-metadata">
+        Contract Metadata
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/lease-model-metadata">
+        Lease Model Metadata
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/lease-liability-schedule-item">
+        Lease Liability Schedule Item
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/asset-accessory">
+        Asset Accessory
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/asset-warranty">
+        Asset Warranty
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/depreciation-period">
+        Depreciation Period
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/depreciation-entry">
+        Depreciation Entry
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/depreciation-job">
+        Depreciation Job
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/depreciation-batch-sequence">
+        Depreciation Batch Sequence
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/fiscal-year">
+        Fiscal Year
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/fiscal-quarter">
+        Fiscal Quarter
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/fiscal-month">
+        Fiscal Month
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/depreciation-job-notice">
+        Depreciation Job Notice
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/customer-type">
+        Customer Type
       </MenuItem>
       <MenuItem icon="asterisk" to="/legal-status">
         Legal Status
@@ -369,15 +582,6 @@ const EntitiesMenu = () => {
       <MenuItem icon="asterisk" to="/nature-of-customer-complaints">
         Nature Of Customer Complaints
       </MenuItem>
-      <MenuItem icon="asterisk" to="/settlement-currency">
-        Settlement Currency
-      </MenuItem>
-      <MenuItem icon="asterisk" to="/security-clearance">
-        Security Clearance
-      </MenuItem>
-      <MenuItem icon="asterisk" to="/customer-type">
-        Customer Type
-      </MenuItem>
       <MenuItem icon="asterisk" to="/gdi-master-data-index">
         Gdi Master Data Index
       </MenuItem>
@@ -386,6 +590,63 @@ const EntitiesMenu = () => {
       </MenuItem>
       <MenuItem icon="asterisk" to="/product-type">
         Product Type
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/account-attribute">
+        Account Attribute
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/account-attribute-metadata">
+        Account Attribute Metadata
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/exchange-rate">
+        Exchange Rate
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/particulars-of-outlet">
+        Particulars Of Outlet
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/weekly-counterfeit-holding">
+        Weekly Counterfeit Holding
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/weekly-cash-holding">
+        Weekly Cash Holding
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/county-sub-county-code">
+        County Sub County Code
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/related-party-relationship">
+        Related Party Relationship
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/terminals-and-pos">
+        Terminals And POS
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/performance-of-foreign-subsidiaries">
+        Performance Of Foreign Subsidiaries
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/account-balance">
+        Account Balance
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/agent-banking-activity">
+        Agent Banking Activity
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/card-acquiring-transaction">
+        Card Acquiring Transaction
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/card-issuer-charges">
+        Card Issuer Charges
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/card-fraud-information">
+        Card Fraud Information
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/card-usage-information">
+        Card Usage Information
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/collateral-information">
+        Collateral Information
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/credit-card-facility">
+        Credit Card Facility
+      </MenuItem>
+      <MenuItem icon="asterisk" to="/card-state">
+        Card State
       </MenuItem>
       {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
     </>

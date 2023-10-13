@@ -378,12 +378,6 @@ const MasterDataMenuItems = () => {
       <MenuItem icon="search" to="/customer-type">
         Customer Type
       </MenuItem>
-      <MenuItem icon="search" to="/gdi-master-data-index">
-        Gdi Master Data Index
-      </MenuItem>
-      <MenuItem icon="search" to="/gdi-transaction-data-index">
-        Gdi Transaction Data Index
-      </MenuItem>
       <MenuItem icon="search" to="/product-type">
         Product Type
       </MenuItem>

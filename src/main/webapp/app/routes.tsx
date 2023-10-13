@@ -9,8 +9,10 @@ import PasswordResetInit from 'app/modules/account/password-reset/init/password-
 import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
 import Logout from 'app/modules/login/logout';
 import Home from 'app/modules/home/home';
-import EntitiesRoutes from 'app/entities/routes';
-import MasterDataRoutes from 'app/gdi/master/routes';
+// import EntitiesRoutes from 'app/entities/routes';
+import MasterDataRoutes from 'app/gdi/master/master-data-routes';
+import GDIDataRoutes from 'app/gdi/data/gdi-data-routes';
+import ServiceRoutes from 'app/gdi/service/service-routes';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
@@ -65,7 +67,9 @@ const AppRoutes = () => {
           path="*"
           element={
             <PrivateRoute hasAnyAuthorities={[AUTHORITIES.GRANULAR_REPORTS_USER]}>
+              <GDIDataRoutes />
               <MasterDataRoutes />
+              <ServiceRoutes />
             </PrivateRoute>
           }
         />

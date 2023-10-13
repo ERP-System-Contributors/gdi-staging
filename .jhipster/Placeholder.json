@@ -1,6 +1,6 @@
 {
   "changelogDate": "20210823115335",
-  "clientRootFolder": "service",
+  "clientRootFolder": "system",
   "databaseType": "sql",
   "dto": "mapstruct",
   "entityTableName": "placeholder",
@@ -14,11 +14,20 @@
       "fieldName": "token",
       "fieldType": "String",
       "fieldValidateRules": ["unique"]
+    },
+    {
+      "fieldName": "fileUploadToken",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compilationToken",
+      "fieldType": "String"
     }
   ],
   "fluentMethods": true,
   "incrementalChangelog": false,
   "jpaMetamodelFiltering": true,
+  "microserviceName": "erpService",
   "name": "Placeholder",
   "pagination": "pagination",
   "readOnly": false,
@@ -29,7 +38,6 @@
       "otherEntityRelationshipName": "placeholder",
       "ownerSide": true,
       "relationshipName": "containingPlaceholder",
-      "relationshipSide": "left",
       "relationshipType": "many-to-one"
     }
   ],

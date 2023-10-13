@@ -9,7 +9,7 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IPlaceholder } from 'app/shared/model/service/placeholder.model';
-import { getEntities as getPlaceholders } from 'app/entities/service/placeholder/placeholder.reducer';
+import { getEntities as getPlaceholders } from 'app/gdi/service/placeholder/placeholder.reducer';
 import { IDepartmentType } from 'app/shared/model/department-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './department-type.reducer';
 

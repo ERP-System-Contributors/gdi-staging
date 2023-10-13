@@ -9,7 +9,7 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IPlaceholder } from 'app/shared/model/service/placeholder.model';
-import { getEntities as getPlaceholders } from 'app/entities/service/placeholder/placeholder.reducer';
+import { getEntities as getPlaceholders } from 'app/gdi/service/placeholder/placeholder.reducer';
 import { IOutletStatus } from 'app/shared/model/outlet-status.model';
 import { BranchStatusType } from 'app/shared/model/enumerations/branch-status-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './outlet-status.reducer';

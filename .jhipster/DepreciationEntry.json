@@ -1,0 +1,75 @@
+{
+  "changelogDate": "20230704162523",
+  "clientRootFolder": "assets",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "postedAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "depreciationAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "assetNumber",
+      "fieldType": "Long"
+    }
+  ],
+  "incrementalChangelog": false,
+  "jpaMetamodelFiltering": true,
+  "name": "DepreciationEntry",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "outletCode",
+      "otherEntityName": "serviceOutlet",
+      "relationshipName": "serviceOutlet",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "assetCategoryName",
+      "otherEntityName": "assetCategory",
+      "relationshipName": "assetCategory",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "depreciationMethodName",
+      "otherEntityName": "depreciationMethod",
+      "relationshipName": "depreciationMethod",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "assetNumber",
+      "otherEntityName": "assetRegistration",
+      "relationshipName": "assetRegistration",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "endDate",
+      "otherEntityName": "depreciationPeriod",
+      "relationshipName": "depreciationPeriod",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "fiscalMonthCode",
+      "otherEntityName": "fiscalMonth",
+      "relationshipName": "fiscalMonth",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "fiscalQuarterCode",
+      "otherEntityName": "fiscalQuarter",
+      "relationshipName": "fiscalQuarter",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "fiscalYearCode",
+      "otherEntityName": "fiscalYear",
+      "relationshipName": "fiscalYear",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

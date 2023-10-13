@@ -1,0 +1,43 @@
+{
+  "changelogDate": "20230705135041",
+  "clientRootFolder": "assets",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "timeOfCommencement",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "depreciationJobStatus",
+      "fieldType": "DepreciationJobStatusType",
+      "fieldValues": "COMPLETE,RUNNING,CREATED,ERRORED,ENQUEUED"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "incrementalChangelog": false,
+  "jpaMetamodelFiltering": true,
+  "name": "DepreciationJob",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "designation",
+      "otherEntityName": "applicationUser",
+      "relationshipName": "createdBy",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "id": false,
+      "otherEntityField": "endDate",
+      "otherEntityName": "depreciationPeriod",
+      "otherEntityRelationshipName": "depreciationJob",
+      "ownerSide": true,
+      "relationshipName": "depreciationPeriod",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

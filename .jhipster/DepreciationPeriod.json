@@ -1,0 +1,75 @@
+{
+  "changelogDate": "20230704155659",
+  "clientRootFolder": "assets",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "depreciationPeriodStatus",
+      "fieldType": "DepreciationPeriodStatusTypes",
+      "fieldValues": "OPEN,CLOSED,PROCESSING"
+    },
+    {
+      "fieldName": "periodCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "processLocked",
+      "fieldType": "Boolean"
+    }
+  ],
+  "incrementalChangelog": false,
+  "jpaMetamodelFiltering": true,
+  "name": "DepreciationPeriod",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": false,
+      "otherEntityField": "endDate",
+      "otherEntityName": "depreciationPeriod",
+      "otherEntityRelationshipName": "nextPeriod",
+      "ownerSide": true,
+      "relationshipName": "previousPeriod",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "applicationIdentity",
+      "otherEntityName": "applicationUser",
+      "relationshipName": "createdBy",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "fiscalYearCode",
+      "otherEntityName": "fiscalYear",
+      "relationshipName": "fiscalYear",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "fiscalMonth",
+      "relationshipName": "fiscalMonth",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "fiscalQuarter",
+      "relationshipName": "fiscalQuarter",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    }
+  ],
+  "service": "serviceImpl"
+}
