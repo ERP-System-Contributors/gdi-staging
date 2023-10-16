@@ -2,7 +2,7 @@ import React from 'react';
 
 import MenuItem from 'app/shared/layout/menus/menu-item';
 
-const EntitiesMenu = () => {
+const GDIDataMenu = () => {
   return (
     <>
       {/* prettier-ignore */}
@@ -68,4 +68,4 @@ const EntitiesMenu = () => {
   );
 };
 
-export default EntitiesMenu;
+export default GDIDataMenu;
