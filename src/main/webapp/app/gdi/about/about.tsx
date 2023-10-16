@@ -71,7 +71,7 @@ export const About = () => {
           </li>
         </ul>
 
-        <p>If you have any question on ERP-System:</p>
+        <p>This project has been forked from the following projects</p>
 
         <ul>
           <li>
@@ -114,9 +114,39 @@ export const About = () => {
           </li>
         </ul>
 
+        <p>Tech stack</p>
+
+        <ul>
+          <li>
+            <a href="https://github.com/ERP-System-Contributors/erp-system" title="ERP System Homepage">
+              ERP System minimum version 1.5.1 backend
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ERP-System-Contributors/gdi-staging" title="GDI Staging Home">
+              GDI Staging client home
+            </a>
+          </li>
+          <li>
+            <a href="https://nodejs.org/dist/v16.16.0/" title="Nodejs">
+              Runtime Node JS minimum version 16.17.0
+            </a>
+          </li>
+          <li>
+            <a href="https://redux.js.org/" title="Redux">
+              Redux version 4.2.0
+            </a>
+          </li>
+          <li>
+            <a href="https://www.jhipster.tech/documentation-archive/v7.9.4" title="JHipster Home">
+              JHipster Version 7.9.4
+            </a>
+          </li>
+        </ul>
+
         <p>
           If you like JHipster, don&apos;t forget to give us a star on{' '}
-          <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/ERP-System-Contributors/erp-system" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           !
