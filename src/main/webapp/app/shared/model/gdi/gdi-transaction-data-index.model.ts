@@ -26,11 +26,12 @@ export interface IGdiTransactionDataIndex {
   databaseName?: string;
   updateFrequency?: UpdateFrequencyTypes;
   datasetBehavior?: DatasetBehaviorTypes;
-  minimumDatarowsPerRequest?: number | null;
+  minimumDataRowsPerRequest?: number | null;
   maximumDataRowsPerRequest?: number | null;
   datasetDescription?: string | null;
   dataTemplateContentType?: string | null;
   dataTemplate?: string | null;
+  dataPath?: string | null;
   masterDataItems?: IGdiMasterDataIndex[] | null;
 }
 

@@ -6,7 +6,7 @@ import { Navbar, Nav, NavbarToggler, Collapse } from 'reactstrap';
 import LoadingBar from 'react-redux-loading-bar';
 
 import { Home, Brand } from './header-components';
-import { AdminMenu, EntitiesMenu, MasterDataMenu, GDIDataMenu, AccountMenu } from '../menus';
+import { AdminMenu, EntitiesMenu, MasterDataMenu, GDIDataMenu, AccountMenu, ServiceMenu } from '../menus';
 import AboutMenu from 'app/shared/layout/menus/about';
 
 export interface IHeaderProps {
@@ -46,6 +46,7 @@ const Header = (props: IHeaderProps) => {
             {props.isAuthenticated && props.isDeveloper && <EntitiesMenu />}
             {props.isAuthenticated && props.isAUser && <GDIDataMenu />}
             {props.isAuthenticated && props.isAUser && <MasterDataMenu />}
+            {props.isAuthenticated && props.isAUser && <ServiceMenu />}
             {props.isAuthenticated && props.isAdmin && (
               <AdminMenu showOpenAPI={props.isOpenAPIEnabled} showDatabase={!props.isInProduction} />
             )}

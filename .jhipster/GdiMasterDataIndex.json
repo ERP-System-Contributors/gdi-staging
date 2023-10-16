@@ -17,6 +17,10 @@
       "fieldName": "businessDescription",
       "fieldType": "byte[]",
       "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "dataPath",
+      "fieldType": "String"
     }
   ],
   "incrementalChangelog": false,

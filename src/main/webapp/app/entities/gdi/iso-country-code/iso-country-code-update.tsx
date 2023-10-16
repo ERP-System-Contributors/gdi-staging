@@ -25,11 +25,13 @@ export const IsoCountryCodeUpdate = () => {
   const updateSuccess = useAppSelector(state => state.isoCountryCode.updateSuccess);
 
   const handleClose = () => {
-    navigate('/iso-country-code');
+    navigate('/iso-country-code' + location.search);
   };
 
   useEffect(() => {
-    if (!isNew) {
+    if (isNew) {
+      dispatch(reset());
+    } else {
       dispatch(getEntity(id));
     }
   }, []);

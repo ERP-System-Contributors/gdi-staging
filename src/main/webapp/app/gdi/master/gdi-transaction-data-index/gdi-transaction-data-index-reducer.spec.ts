@@ -31,9 +31,9 @@ import reducer, {
   updateEntity,
   partialUpdateEntity,
   reset,
-} from './iso-country-code.reducer';
+} from './gdi-transaction-data-index.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IIsoCountryCode, defaultValue } from 'app/shared/model/gdi/iso-country-code.model';
+import { IGdiTransactionDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {
@@ -44,7 +44,7 @@ describe('Entities reducer tests', () => {
     }
   }
 
-  const initialState: EntityState<IIsoCountryCode> = {
+  const initialState: EntityState<IGdiTransactionDataIndex> = {
     loading: false,
     errorMessage: null,
     entities: [],
@@ -222,7 +222,7 @@ describe('Entities reducer tests', () => {
       axios.delete = sinon.stub().returns(Promise.resolve(resolvedObject));
     });
 
-    it('dispatches FETCH_ISOCOUNTRYCODE_LIST actions', async () => {
+    it('dispatches FETCH_GDITRANSACTIONDATAINDEX_LIST actions', async () => {
       const expectedActions = [
         {
           type: getEntities.pending.type,
@@ -236,7 +236,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[0]).toMatchObject(expectedActions[0]);
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
-    it('dispatches SEARCH_ISOCOUNTRYCODES actions', async () => {
+    it('dispatches SEARCH_GDITRANSACTIONDATAINDICES actions', async () => {
       const expectedActions = [
         {
           type: searchEntities.pending.type,
@@ -251,7 +251,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
 
-    it('dispatches FETCH_ISOCOUNTRYCODE actions', async () => {
+    it('dispatches FETCH_GDITRANSACTIONDATAINDEX actions', async () => {
       const expectedActions = [
         {
           type: getEntity.pending.type,
@@ -266,7 +266,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
 
-    it('dispatches CREATE_ISOCOUNTRYCODE actions', async () => {
+    it('dispatches CREATE_GDITRANSACTIONDATAINDEX actions', async () => {
       const expectedActions = [
         {
           type: createEntity.pending.type,
@@ -285,7 +285,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
     });
 
-    it('dispatches UPDATE_ISOCOUNTRYCODE actions', async () => {
+    it('dispatches UPDATE_GDITRANSACTIONDATAINDEX actions', async () => {
       const expectedActions = [
         {
           type: updateEntity.pending.type,
@@ -304,7 +304,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
     });
 
-    it('dispatches PARTIAL_UPDATE_ISOCOUNTRYCODE actions', async () => {
+    it('dispatches PARTIAL_UPDATE_GDITRANSACTIONDATAINDEX actions', async () => {
       const expectedActions = [
         {
           type: partialUpdateEntity.pending.type,
@@ -323,7 +323,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
     });
 
-    it('dispatches DELETE_ISOCOUNTRYCODE actions', async () => {
+    it('dispatches DELETE_GDITRANSACTIONDATAINDEX actions', async () => {
       const expectedActions = [
         {
           type: deleteEntity.pending.type,

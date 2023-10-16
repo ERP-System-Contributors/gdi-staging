@@ -27,7 +27,7 @@
   "incrementalChangelog": false,
   "jpaMetamodelFiltering": true,
   "name": "IsoCountryCode",
-  "pagination": "infinite-scroll",
+  "pagination": "pagination",
   "readOnly": false,
   "relationships": [],
   "service": "serviceImpl"

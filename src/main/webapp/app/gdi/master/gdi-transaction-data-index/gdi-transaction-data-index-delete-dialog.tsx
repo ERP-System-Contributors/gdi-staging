@@ -5,9 +5,9 @@ import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useAppDispatch, useAppSelector } from 'app/config/store';
-import { getEntity, deleteEntity } from './iso-country-code.reducer';
+import { getEntity, deleteEntity } from './gdi-transaction-data-index.reducer';
 
-export const IsoCountryCodeDeleteDialog = () => {
+export const GdiTransactionDataIndexDeleteDialog = () => {
   const dispatch = useAppDispatch();
 
   const location = useLocation();
@@ -21,11 +21,11 @@ export const IsoCountryCodeDeleteDialog = () => {
     setLoadModal(true);
   }, []);
 
-  const isoCountryCodeEntity = useAppSelector(state => state.isoCountryCode.entity);
-  const updateSuccess = useAppSelector(state => state.isoCountryCode.updateSuccess);
+  const gdiTransactionDataIndexEntity = useAppSelector(state => state.gdiTransactionDataIndex.entity);
+  const updateSuccess = useAppSelector(state => state.gdiTransactionDataIndex.updateSuccess);
 
   const handleClose = () => {
-    navigate('/iso-country-code' + location.search);
+    navigate('/gdi-transaction-data-index' + location.search);
   };
 
   useEffect(() => {
@@ -36,23 +36,23 @@ export const IsoCountryCodeDeleteDialog = () => {
   }, [updateSuccess]);
 
   const confirmDelete = () => {
-    dispatch(deleteEntity(isoCountryCodeEntity.id));
+    dispatch(deleteEntity(gdiTransactionDataIndexEntity.id));
   };
 
   return (
     <Modal isOpen toggle={handleClose}>
-      <ModalHeader toggle={handleClose} data-cy="isoCountryCodeDeleteDialogHeading">
+      <ModalHeader toggle={handleClose} data-cy="gdiTransactionDataIndexDeleteDialogHeading">
         Confirm delete operation
       </ModalHeader>
-      <ModalBody id="gdiStagingApp.gdiIsoCountryCode.delete.question">
-        Are you sure you want to delete Iso Country Code {isoCountryCodeEntity.id}?
+      <ModalBody id="gdiStagingApp.gdiGdiTransactionDataIndex.delete.question">
+        Are you sure you want to delete Gdi Transaction Data Index {gdiTransactionDataIndexEntity.id}?
       </ModalBody>
       <ModalFooter>
         <Button color="secondary" onClick={handleClose}>
           <FontAwesomeIcon icon="ban" />
           &nbsp; Cancel
         </Button>
-        <Button id="jhi-confirm-delete-isoCountryCode" data-cy="entityConfirmDeleteButton" color="danger" onClick={confirmDelete}>
+        <Button id="jhi-confirm-delete-gdiTransactionDataIndex" data-cy="entityConfirmDeleteButton" color="danger" onClick={confirmDelete}>
           <FontAwesomeIcon icon="trash" />
           &nbsp; Delete
         </Button>
@@ -61,4 +61,4 @@ export const IsoCountryCodeDeleteDialog = () => {
   );
 };
 
-export default IsoCountryCodeDeleteDialog;
+export default GdiTransactionDataIndexDeleteDialog;

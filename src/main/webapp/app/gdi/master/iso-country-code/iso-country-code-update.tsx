@@ -25,11 +25,13 @@ export const IsoCountryCodeUpdate = () => {
   const updateSuccess = useAppSelector(state => state.isoCountryCode.updateSuccess);
 
   const handleClose = () => {
-    navigate('/iso-country-code');
+    navigate('/iso-country-code' + location.search);
   };
 
   useEffect(() => {
-    if (!isNew) {
+    if (isNew) {
+      dispatch(reset());
+    } else {
       dispatch(getEntity(id));
     }
   }, []);
@@ -64,7 +66,7 @@ export const IsoCountryCodeUpdate = () => {
     <div>
       <Row className="justify-content-center">
         <Col md="8">
-          <h2 id="gdiStagingApp.isoCountryCode.home.createOrEditLabel" data-cy="IsoCountryCodeCreateUpdateHeading">
+          <h2 id="gdiStagingApp.gdiIsoCountryCode.home.createOrEditLabel" data-cy="IsoCountryCodeCreateUpdateHeading">
             Create or edit a Iso Country Code
           </h2>
         </Col>

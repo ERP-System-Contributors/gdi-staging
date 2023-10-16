@@ -21,9 +21,9 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IIsoCountryCode, defaultValue } from 'app/shared/model/gdi/iso-country-code.model';
+import { IGdiMasterDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-master-data-index.model';
 
-const initialState: EntityState<IIsoCountryCode> = {
+const initialState: EntityState<IGdiMasterDataIndex> = {
   loading: false,
   errorMessage: null,
   entities: [],
@@ -33,34 +33,34 @@ const initialState: EntityState<IIsoCountryCode> = {
   updateSuccess: false,
 };
 
-const apiUrl = 'api/iso-country-codes';
-const apiSearchUrl = 'api/_search/iso-country-codes';
+const apiUrl = 'api/gdi-master-data-indices';
+const apiSearchUrl = 'api/_search/gdi-master-data-indices';
 
 // Actions
 
-export const searchEntities = createAsyncThunk('isoCountryCode/search_entity', async ({ query, page, size, sort }: IQueryParams) => {
+export const searchEntities = createAsyncThunk('gdiMasterDataIndex/search_entity', async ({ query, page, size, sort }: IQueryParams) => {
   const requestUrl = `${apiSearchUrl}?query=${query}${sort ? `&page=${page}&size=${size}&sort=${sort}` : ''}`;
-  return axios.get<IIsoCountryCode[]>(requestUrl);
+  return axios.get<IGdiMasterDataIndex[]>(requestUrl);
 });
 
-export const getEntities = createAsyncThunk('isoCountryCode/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
+export const getEntities = createAsyncThunk('gdiMasterDataIndex/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
   const requestUrl = `${apiUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}&` : '?'}cacheBuster=${new Date().getTime()}`;
-  return axios.get<IIsoCountryCode[]>(requestUrl);
+  return axios.get<IGdiMasterDataIndex[]>(requestUrl);
 });
 
 export const getEntity = createAsyncThunk(
-  'isoCountryCode/fetch_entity',
+  'gdiMasterDataIndex/fetch_entity',
   async (id: string | number) => {
     const requestUrl = `${apiUrl}/${id}`;
-    return axios.get<IIsoCountryCode>(requestUrl);
+    return axios.get<IGdiMasterDataIndex>(requestUrl);
   },
   { serializeError: serializeAxiosError }
 );
 
 export const createEntity = createAsyncThunk(
-  'isoCountryCode/create_entity',
-  async (entity: IIsoCountryCode, thunkAPI) => {
-    const result = await axios.post<IIsoCountryCode>(apiUrl, cleanEntity(entity));
+  'gdiMasterDataIndex/create_entity',
+  async (entity: IGdiMasterDataIndex, thunkAPI) => {
+    const result = await axios.post<IGdiMasterDataIndex>(apiUrl, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -68,9 +68,9 @@ export const createEntity = createAsyncThunk(
 );
 
 export const updateEntity = createAsyncThunk(
-  'isoCountryCode/update_entity',
-  async (entity: IIsoCountryCode, thunkAPI) => {
-    const result = await axios.put<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'gdiMasterDataIndex/update_entity',
+  async (entity: IGdiMasterDataIndex, thunkAPI) => {
+    const result = await axios.put<IGdiMasterDataIndex>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -78,9 +78,9 @@ export const updateEntity = createAsyncThunk(
 );
 
 export const partialUpdateEntity = createAsyncThunk(
-  'isoCountryCode/partial_update_entity',
-  async (entity: IIsoCountryCode, thunkAPI) => {
-    const result = await axios.patch<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'gdiMasterDataIndex/partial_update_entity',
+  async (entity: IGdiMasterDataIndex, thunkAPI) => {
+    const result = await axios.patch<IGdiMasterDataIndex>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -88,10 +88,10 @@ export const partialUpdateEntity = createAsyncThunk(
 );
 
 export const deleteEntity = createAsyncThunk(
-  'isoCountryCode/delete_entity',
+  'gdiMasterDataIndex/delete_entity',
   async (id: string | number, thunkAPI) => {
     const requestUrl = `${apiUrl}/${id}`;
-    const result = await axios.delete<IIsoCountryCode>(requestUrl);
+    const result = await axios.delete<IGdiMasterDataIndex>(requestUrl);
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -100,8 +100,8 @@ export const deleteEntity = createAsyncThunk(
 
 // slice
 
-export const IsoCountryCodeSlice = createEntitySlice({
-  name: 'isoCountryCode',
+export const GdiMasterDataIndexSlice = createEntitySlice({
+  name: 'gdiMasterDataIndex',
   initialState,
   extraReducers(builder) {
     builder
@@ -143,7 +143,7 @@ export const IsoCountryCodeSlice = createEntitySlice({
   },
 });
 
-export const { reset } = IsoCountryCodeSlice.actions;
+export const { reset } = GdiMasterDataIndexSlice.actions;
 
 // Reducer
-export default IsoCountryCodeSlice.reducer;
+export default GdiMasterDataIndexSlice.reducer;

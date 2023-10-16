@@ -21,9 +21,9 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IIsoCountryCode, defaultValue } from 'app/shared/model/gdi/iso-country-code.model';
+import { IGdiTransactionDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
 
-const initialState: EntityState<IIsoCountryCode> = {
+const initialState: EntityState<IGdiTransactionDataIndex> = {
   loading: false,
   errorMessage: null,
   entities: [],
@@ -33,34 +33,37 @@ const initialState: EntityState<IIsoCountryCode> = {
   updateSuccess: false,
 };
 
-const apiUrl = 'api/iso-country-codes';
-const apiSearchUrl = 'api/_search/iso-country-codes';
+const apiUrl = 'api/gdi-transaction-data-indices';
+const apiSearchUrl = 'api/_search/gdi-transaction-data-indices';
 
 // Actions
 
-export const searchEntities = createAsyncThunk('isoCountryCode/search_entity', async ({ query, page, size, sort }: IQueryParams) => {
-  const requestUrl = `${apiSearchUrl}?query=${query}${sort ? `&page=${page}&size=${size}&sort=${sort}` : ''}`;
-  return axios.get<IIsoCountryCode[]>(requestUrl);
-});
+export const searchEntities = createAsyncThunk(
+  'gdiTransactionDataIndex/search_entity',
+  async ({ query, page, size, sort }: IQueryParams) => {
+    const requestUrl = `${apiSearchUrl}?query=${query}${sort ? `&page=${page}&size=${size}&sort=${sort}` : ''}`;
+    return axios.get<IGdiTransactionDataIndex[]>(requestUrl);
+  }
+);
 
-export const getEntities = createAsyncThunk('isoCountryCode/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
+export const getEntities = createAsyncThunk('gdiTransactionDataIndex/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
   const requestUrl = `${apiUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}&` : '?'}cacheBuster=${new Date().getTime()}`;
-  return axios.get<IIsoCountryCode[]>(requestUrl);
+  return axios.get<IGdiTransactionDataIndex[]>(requestUrl);
 });
 
 export const getEntity = createAsyncThunk(
-  'isoCountryCode/fetch_entity',
+  'gdiTransactionDataIndex/fetch_entity',
   async (id: string | number) => {
     const requestUrl = `${apiUrl}/${id}`;
-    return axios.get<IIsoCountryCode>(requestUrl);
+    return axios.get<IGdiTransactionDataIndex>(requestUrl);
   },
   { serializeError: serializeAxiosError }
 );
 
 export const createEntity = createAsyncThunk(
-  'isoCountryCode/create_entity',
-  async (entity: IIsoCountryCode, thunkAPI) => {
-    const result = await axios.post<IIsoCountryCode>(apiUrl, cleanEntity(entity));
+  'gdiTransactionDataIndex/create_entity',
+  async (entity: IGdiTransactionDataIndex, thunkAPI) => {
+    const result = await axios.post<IGdiTransactionDataIndex>(apiUrl, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -68,9 +71,9 @@ export const createEntity = createAsyncThunk(
 );
 
 export const updateEntity = createAsyncThunk(
-  'isoCountryCode/update_entity',
-  async (entity: IIsoCountryCode, thunkAPI) => {
-    const result = await axios.put<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'gdiTransactionDataIndex/update_entity',
+  async (entity: IGdiTransactionDataIndex, thunkAPI) => {
+    const result = await axios.put<IGdiTransactionDataIndex>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -78,9 +81,9 @@ export const updateEntity = createAsyncThunk(
 );
 
 export const partialUpdateEntity = createAsyncThunk(
-  'isoCountryCode/partial_update_entity',
-  async (entity: IIsoCountryCode, thunkAPI) => {
-    const result = await axios.patch<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'gdiTransactionDataIndex/partial_update_entity',
+  async (entity: IGdiTransactionDataIndex, thunkAPI) => {
+    const result = await axios.patch<IGdiTransactionDataIndex>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -88,10 +91,10 @@ export const partialUpdateEntity = createAsyncThunk(
 );
 
 export const deleteEntity = createAsyncThunk(
-  'isoCountryCode/delete_entity',
+  'gdiTransactionDataIndex/delete_entity',
   async (id: string | number, thunkAPI) => {
     const requestUrl = `${apiUrl}/${id}`;
-    const result = await axios.delete<IIsoCountryCode>(requestUrl);
+    const result = await axios.delete<IGdiTransactionDataIndex>(requestUrl);
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -100,8 +103,8 @@ export const deleteEntity = createAsyncThunk(
 
 // slice
 
-export const IsoCountryCodeSlice = createEntitySlice({
-  name: 'isoCountryCode',
+export const GdiTransactionDataIndexSlice = createEntitySlice({
+  name: 'gdiTransactionDataIndex',
   initialState,
   extraReducers(builder) {
     builder
@@ -143,7 +146,7 @@ export const IsoCountryCodeSlice = createEntitySlice({
   },
 });
 
-export const { reset } = IsoCountryCodeSlice.actions;
+export const { reset } = GdiTransactionDataIndexSlice.actions;
 
 // Reducer
-export default IsoCountryCodeSlice.reducer;
+export default GdiTransactionDataIndexSlice.reducer;

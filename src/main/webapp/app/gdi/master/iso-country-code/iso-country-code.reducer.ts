@@ -18,7 +18,6 @@
 
 import axios from 'axios';
 import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/toolkit';
-import { loadMoreDataWhenScrolled, parseHeaderForLinks } from 'react-jhipster';
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
@@ -29,7 +28,6 @@ const initialState: EntityState<IIsoCountryCode> = {
   errorMessage: null,
   entities: [],
   entity: defaultValue,
-  links: { next: 0 },
   updating: false,
   totalItems: 0,
   updateSuccess: false,
@@ -62,7 +60,9 @@ export const getEntity = createAsyncThunk(
 export const createEntity = createAsyncThunk(
   'isoCountryCode/create_entity',
   async (entity: IIsoCountryCode, thunkAPI) => {
-    return axios.post<IIsoCountryCode>(apiUrl, cleanEntity(entity));
+    const result = await axios.post<IIsoCountryCode>(apiUrl, cleanEntity(entity));
+    thunkAPI.dispatch(getEntities({}));
+    return result;
   },
   { serializeError: serializeAxiosError }
 );
@@ -70,7 +70,9 @@ export const createEntity = createAsyncThunk(
 export const updateEntity = createAsyncThunk(
   'isoCountryCode/update_entity',
   async (entity: IIsoCountryCode, thunkAPI) => {
-    return axios.put<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+    const result = await axios.put<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+    thunkAPI.dispatch(getEntities({}));
+    return result;
   },
   { serializeError: serializeAxiosError }
 );
@@ -78,7 +80,9 @@ export const updateEntity = createAsyncThunk(
 export const partialUpdateEntity = createAsyncThunk(
   'isoCountryCode/partial_update_entity',
   async (entity: IIsoCountryCode, thunkAPI) => {
-    return axios.patch<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+    const result = await axios.patch<IIsoCountryCode>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+    thunkAPI.dispatch(getEntities({}));
+    return result;
   },
   { serializeError: serializeAxiosError }
 );
@@ -87,7 +91,9 @@ export const deleteEntity = createAsyncThunk(
   'isoCountryCode/delete_entity',
   async (id: string | number, thunkAPI) => {
     const requestUrl = `${apiUrl}/${id}`;
-    return await axios.delete<IIsoCountryCode>(requestUrl);
+    const result = await axios.delete<IIsoCountryCode>(requestUrl);
+    thunkAPI.dispatch(getEntities({}));
+    return result;
   },
   { serializeError: serializeAxiosError }
 );
@@ -110,13 +116,11 @@ export const IsoCountryCodeSlice = createEntitySlice({
       })
       .addMatcher(isFulfilled(getEntities, searchEntities), (state, action) => {
         const { data, headers } = action.payload;
-        const links = parseHeaderForLinks(headers.link);
 
         return {
           ...state,
           loading: false,
-          links,
-          entities: loadMoreDataWhenScrolled(state.entities, data, links),
+          entities: data,
           totalItems: parseInt(headers['x-total-count'], 10),
         };
       })

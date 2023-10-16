@@ -25,7 +25,7 @@ export const IsoCountryCodeDeleteDialog = () => {
   const updateSuccess = useAppSelector(state => state.isoCountryCode.updateSuccess);
 
   const handleClose = () => {
-    navigate('/iso-country-code');
+    navigate('/iso-country-code' + location.search);
   };
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export const IsoCountryCodeDeleteDialog = () => {
       <ModalHeader toggle={handleClose} data-cy="isoCountryCodeDeleteDialogHeading">
         Confirm delete operation
       </ModalHeader>
-      <ModalBody id="gdiStagingApp.isoCountryCode.delete.question">
+      <ModalBody id="gdiStagingApp.gdiIsoCountryCode.delete.question">
         Are you sure you want to delete Iso Country Code {isoCountryCodeEntity.id}?
       </ModalBody>
       <ModalFooter>

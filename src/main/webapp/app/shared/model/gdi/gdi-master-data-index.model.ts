@@ -21,6 +21,7 @@ export interface IGdiMasterDataIndex {
   entityName?: string;
   databaseName?: string;
   businessDescription?: string | null;
+  dataPath?: string | null;
 }
 
 export const defaultValue: Readonly<IGdiMasterDataIndex> = {};
