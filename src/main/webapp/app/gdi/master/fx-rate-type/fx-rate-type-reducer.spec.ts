@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './fx-rate-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFxRateType, defaultValue } from 'app/shared/model/fx-rate-type.model';
+import { IFxRateType, defaultValue } from 'app/shared/model/gdi/fx-rate-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

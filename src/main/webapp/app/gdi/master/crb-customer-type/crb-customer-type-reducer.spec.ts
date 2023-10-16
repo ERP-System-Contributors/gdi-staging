@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-customer-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbCustomerType, defaultValue } from 'app/shared/model/crb-customer-type.model';
+import { ICrbCustomerType, defaultValue } from 'app/shared/model/gdi/crb-customer-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

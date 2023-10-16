@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './fraud-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFraudType, defaultValue } from 'app/shared/model/fraud-type.model';
+import { IFraudType, defaultValue } from 'app/shared/model/gdi/fraud-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

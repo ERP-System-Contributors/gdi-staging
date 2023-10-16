@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbSourceOfInformationType } from 'app/shared/model/crb-source-of-information-type.model';
+import { ICrbSourceOfInformationType } from 'app/shared/model/gdi/crb-source-of-information-type.model';
 import { searchEntities, getEntities } from './crb-source-of-information-type.reducer';
 
 export const CrbSourceOfInformationType = () => {

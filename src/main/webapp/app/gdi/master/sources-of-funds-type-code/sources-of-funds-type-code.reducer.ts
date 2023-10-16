@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ISourcesOfFundsTypeCode, defaultValue } from 'app/shared/model/sources-of-funds-type-code.model';
+import { ISourcesOfFundsTypeCode, defaultValue } from 'app/shared/model/gdi/sources-of-funds-type-code.model';
 
 const initialState: EntityState<ISourcesOfFundsTypeCode> = {
   loading: false,

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IShareholderType } from 'app/shared/model/shareholder-type.model';
+import { IShareholderType } from 'app/shared/model/gdi/shareholder-type.model';
 import { ShareHolderTypes } from 'app/shared/model/enumerations/share-holder-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './shareholder-type.reducer';
 

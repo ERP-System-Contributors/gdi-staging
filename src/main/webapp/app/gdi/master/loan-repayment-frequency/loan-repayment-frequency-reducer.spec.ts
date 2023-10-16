@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './loan-repayment-frequency.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILoanRepaymentFrequency, defaultValue } from 'app/shared/model/loan-repayment-frequency.model';
+import { ILoanRepaymentFrequency, defaultValue } from 'app/shared/model/gdi/loan-repayment-frequency.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

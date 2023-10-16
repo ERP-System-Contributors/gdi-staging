@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './loan-restructure-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILoanRestructureFlag, defaultValue } from 'app/shared/model/loan-restructure-flag.model';
+import { ILoanRestructureFlag, defaultValue } from 'app/shared/model/gdi/loan-restructure-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

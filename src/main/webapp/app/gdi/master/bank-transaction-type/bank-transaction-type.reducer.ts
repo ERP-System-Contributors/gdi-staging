@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IBankTransactionType, defaultValue } from 'app/shared/model/bank-transaction-type.model';
+import { IBankTransactionType, defaultValue } from 'app/shared/model/gdi/bank-transaction-type.model';
 
 const initialState: EntityState<IBankTransactionType> = {
   loading: false,

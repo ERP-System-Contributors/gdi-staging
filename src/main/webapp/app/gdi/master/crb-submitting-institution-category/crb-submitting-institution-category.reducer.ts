@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICrbSubmittingInstitutionCategory, defaultValue } from 'app/shared/model/crb-submitting-institution-category.model';
+import { ICrbSubmittingInstitutionCategory, defaultValue } from 'app/shared/model/gdi/crb-submitting-institution-category.model';
 
 const initialState: EntityState<ICrbSubmittingInstitutionCategory> = {
   loading: false,

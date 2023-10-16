@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IAcquiringIssuingFlag, defaultValue } from 'app/shared/model/acquiring-issuing-flag.model';
+import { IAcquiringIssuingFlag, defaultValue } from 'app/shared/model/gdi/acquiring-issuing-flag.model';
 
 const initialState: EntityState<IAcquiringIssuingFlag> = {
   loading: false,

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILoanAccountCategory } from 'app/shared/model/loan-account-category.model';
+import { ILoanAccountCategory } from 'app/shared/model/gdi/loan-account-category.model';
 import { LoanAccountMutationTypes } from 'app/shared/model/enumerations/loan-account-mutation-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './loan-account-category.reducer';
 

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './category-of-security.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICategoryOfSecurity, defaultValue } from 'app/shared/model/category-of-security.model';
+import { ICategoryOfSecurity, defaultValue } from 'app/shared/model/gdi/category-of-security.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

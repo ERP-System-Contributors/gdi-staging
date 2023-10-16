@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './loan-account-category.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILoanAccountCategory, defaultValue } from 'app/shared/model/loan-account-category.model';
+import { ILoanAccountCategory, defaultValue } from 'app/shared/model/gdi/loan-account-category.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

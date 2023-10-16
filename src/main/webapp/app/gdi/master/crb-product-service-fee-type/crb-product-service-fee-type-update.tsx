@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbProductServiceFeeType } from 'app/shared/model/crb-product-service-fee-type.model';
+import { ICrbProductServiceFeeType } from 'app/shared/model/gdi/crb-product-service-fee-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-product-service-fee-type.reducer';
 
 export const CrbProductServiceFeeTypeUpdate = () => {

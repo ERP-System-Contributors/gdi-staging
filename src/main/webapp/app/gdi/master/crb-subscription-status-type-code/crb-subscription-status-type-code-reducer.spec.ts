@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-subscription-status-type-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbSubscriptionStatusTypeCode, defaultValue } from 'app/shared/model/crb-subscription-status-type-code.model';
+import { ICrbSubscriptionStatusTypeCode, defaultValue } from 'app/shared/model/gdi/crb-subscription-status-type-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

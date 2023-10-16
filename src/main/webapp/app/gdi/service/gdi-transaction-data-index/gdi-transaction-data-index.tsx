@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiTransactionDataIndex } from 'app/shared/model/gdi-transaction-data-index.model';
+import { IGdiTransactionDataIndex } from 'app/shared/model/gdi-data/gdi-transaction-data-index.model';
 import { searchEntities, getEntities } from './gdi-transaction-data-index.reducer';
 
 export const GdiTransactionDataIndex = () => {

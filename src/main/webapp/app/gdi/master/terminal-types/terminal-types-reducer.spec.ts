@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './terminal-types.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ITerminalTypes, defaultValue } from 'app/shared/model/terminal-types.model';
+import { ITerminalTypes, defaultValue } from 'app/shared/model/gdi/terminal-types.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

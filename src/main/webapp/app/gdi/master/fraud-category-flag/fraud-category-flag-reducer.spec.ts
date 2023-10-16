@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './fraud-category-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFraudCategoryFlag, defaultValue } from 'app/shared/model/fraud-category-flag.model';
+import { IFraudCategoryFlag, defaultValue } from 'app/shared/model/gdi/fraud-category-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

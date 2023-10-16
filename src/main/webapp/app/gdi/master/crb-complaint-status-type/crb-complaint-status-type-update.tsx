@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbComplaintStatusType } from 'app/shared/model/crb-complaint-status-type.model';
+import { ICrbComplaintStatusType } from 'app/shared/model/gdi/crb-complaint-status-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-complaint-status-type.reducer';
 
 export const CrbComplaintStatusTypeUpdate = () => {

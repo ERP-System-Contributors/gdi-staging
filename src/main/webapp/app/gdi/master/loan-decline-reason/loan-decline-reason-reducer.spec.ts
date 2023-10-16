@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './loan-decline-reason.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILoanDeclineReason, defaultValue } from 'app/shared/model/loan-decline-reason.model';
+import { ILoanDeclineReason, defaultValue } from 'app/shared/model/gdi/loan-decline-reason.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

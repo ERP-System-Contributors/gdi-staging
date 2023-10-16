@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './merchant-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IMerchantType, defaultValue } from 'app/shared/model/merchant-type.model';
+import { IMerchantType, defaultValue } from 'app/shared/model/gdi/merchant-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

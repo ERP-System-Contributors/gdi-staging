@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './currency-serviceability-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICurrencyServiceabilityFlag, defaultValue } from 'app/shared/model/currency-serviceability-flag.model';
+import { ICurrencyServiceabilityFlag, defaultValue } from 'app/shared/model/gdi/currency-serviceability-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

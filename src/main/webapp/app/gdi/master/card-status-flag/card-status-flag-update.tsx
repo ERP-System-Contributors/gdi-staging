@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICardStatusFlag } from 'app/shared/model/card-status-flag.model';
+import { ICardStatusFlag } from 'app/shared/model/gdi/card-status-flag.model';
 import { FlagCodes } from 'app/shared/model/enumerations/flag-codes.model';
 import { getEntity, updateEntity, createEntity, reset } from './card-status-flag.reducer';
 

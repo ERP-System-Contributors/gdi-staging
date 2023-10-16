@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-source-of-information-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbSourceOfInformationType, defaultValue } from 'app/shared/model/crb-source-of-information-type.model';
+import { ICrbSourceOfInformationType, defaultValue } from 'app/shared/model/gdi/crb-source-of-information-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

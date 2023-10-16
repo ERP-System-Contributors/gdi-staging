@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICardTypes, defaultValue } from 'app/shared/model/card-types.model';
+import { ICardTypes, defaultValue } from 'app/shared/model/gdi/card-types.model';
 
 const initialState: EntityState<ICardTypes> = {
   loading: false,

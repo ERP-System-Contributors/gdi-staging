@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAccountStatusType } from 'app/shared/model/account-status-type.model';
+import { IAccountStatusType } from 'app/shared/model/gdi/account-status-type.model';
 import { searchEntities, getEntities } from './account-status-type.reducer';
 
 export const AccountStatusType = () => {

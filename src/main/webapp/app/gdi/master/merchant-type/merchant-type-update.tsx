@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IMerchantType } from 'app/shared/model/merchant-type.model';
+import { IMerchantType } from 'app/shared/model/gdi/merchant-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './merchant-type.reducer';
 
 export const MerchantTypeUpdate = () => {

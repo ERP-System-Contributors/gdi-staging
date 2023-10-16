@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IChannelType } from 'app/shared/model/channel-type.model';
+import { IChannelType } from 'app/shared/model/gdi/channel-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './channel-type.reducer';
 
 export const ChannelTypeUpdate = () => {

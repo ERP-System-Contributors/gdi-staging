@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAccountType } from 'app/shared/model/account-type.model';
+import { IAccountType } from 'app/shared/model/gdi/account-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './account-type.reducer';
 
 export const AccountTypeUpdate = () => {

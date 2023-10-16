@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGlMapping } from 'app/shared/model/gl-mapping.model';
+import { IGlMapping } from 'app/shared/model/gdi/gl-mapping.model';
 import { searchEntities, getEntities } from './gl-mapping.reducer';
 
 export const GlMapping = () => {

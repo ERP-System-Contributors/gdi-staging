@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICurrencyServiceabilityFlag } from 'app/shared/model/currency-serviceability-flag.model';
+import { ICurrencyServiceabilityFlag } from 'app/shared/model/gdi/currency-serviceability-flag.model';
 import { searchEntities, getEntities } from './currency-serviceability-flag.reducer';
 
 export const CurrencyServiceabilityFlag = () => {

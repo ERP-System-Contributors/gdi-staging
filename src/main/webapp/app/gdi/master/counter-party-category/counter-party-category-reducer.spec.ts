@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './counter-party-category.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICounterPartyCategory, defaultValue } from 'app/shared/model/counter-party-category.model';
+import { ICounterPartyCategory, defaultValue } from 'app/shared/model/gdi/counter-party-category.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

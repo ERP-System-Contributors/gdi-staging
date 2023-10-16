@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-aging-bands.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbAgingBands, defaultValue } from 'app/shared/model/crb-aging-bands.model';
+import { ICrbAgingBands, defaultValue } from 'app/shared/model/gdi/crb-aging-bands.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

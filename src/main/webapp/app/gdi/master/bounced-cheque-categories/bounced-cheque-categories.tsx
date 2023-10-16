@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IBouncedChequeCategories } from 'app/shared/model/bounced-cheque-categories.model';
+import { IBouncedChequeCategories } from 'app/shared/model/gdi/bounced-cheque-categories.model';
 import { searchEntities, getEntities } from './bounced-cheque-categories.reducer';
 
 export const BouncedChequeCategories = () => {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IIsicEconomicActivity } from 'app/shared/model/isic-economic-activity.model';
+import { IIsicEconomicActivity } from 'app/shared/model/gdi/isic-economic-activity.model';
 import { getEntity, updateEntity, createEntity, reset } from './isic-economic-activity.reducer';
 
 export const IsicEconomicActivityUpdate = () => {

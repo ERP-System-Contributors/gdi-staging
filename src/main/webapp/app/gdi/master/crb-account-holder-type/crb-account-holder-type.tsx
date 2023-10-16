@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbAccountHolderType } from 'app/shared/model/crb-account-holder-type.model';
+import { ICrbAccountHolderType } from 'app/shared/model/gdi/crb-account-holder-type.model';
 import { searchEntities, getEntities } from './crb-account-holder-type.reducer';
 
 export const CrbAccountHolderType = () => {

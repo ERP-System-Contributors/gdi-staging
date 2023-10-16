@@ -4,7 +4,7 @@ import { loadMoreDataWhenScrolled, parseHeaderForLinks } from 'react-jhipster';
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IIsoCountryCode, defaultValue } from 'app/shared/model/iso-country-code.model';
+import { IIsoCountryCode, defaultValue } from 'app/shared/model/gdi/iso-country-code.model';
 
 const initialState: EntityState<IIsoCountryCode> = {
   loading: false,

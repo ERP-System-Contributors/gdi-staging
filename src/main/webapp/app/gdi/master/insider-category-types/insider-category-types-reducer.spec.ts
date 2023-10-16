@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './insider-category-types.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IInsiderCategoryTypes, defaultValue } from 'app/shared/model/insider-category-types.model';
+import { IInsiderCategoryTypes, defaultValue } from 'app/shared/model/gdi/insider-category-types.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

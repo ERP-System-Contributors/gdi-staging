@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './institution-contact-details.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IInstitutionContactDetails, defaultValue } from 'app/shared/model/institution-contact-details.model';
+import { IInstitutionContactDetails, defaultValue } from 'app/shared/model/gdi/institution-contact-details.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

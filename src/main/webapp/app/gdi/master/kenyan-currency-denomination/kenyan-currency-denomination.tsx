@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IKenyanCurrencyDenomination } from 'app/shared/model/kenyan-currency-denomination.model';
+import { IKenyanCurrencyDenomination } from 'app/shared/model/gdi/kenyan-currency-denomination.model';
 import { searchEntities, getEntities } from './kenyan-currency-denomination.reducer';
 
 export const KenyanCurrencyDenomination = () => {

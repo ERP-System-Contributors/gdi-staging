@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ILoanPerformanceClassification, defaultValue } from 'app/shared/model/loan-performance-classification.model';
+import { ILoanPerformanceClassification, defaultValue } from 'app/shared/model/gdi/loan-performance-classification.model';
 
 const initialState: EntityState<ILoanPerformanceClassification> = {
   loading: false,

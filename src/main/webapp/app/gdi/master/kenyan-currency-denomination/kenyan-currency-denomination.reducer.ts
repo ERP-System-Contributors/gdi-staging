@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IKenyanCurrencyDenomination, defaultValue } from 'app/shared/model/kenyan-currency-denomination.model';
+import { IKenyanCurrencyDenomination, defaultValue } from 'app/shared/model/gdi/kenyan-currency-denomination.model';
 
 const initialState: EntityState<IKenyanCurrencyDenomination> = {
   loading: false,

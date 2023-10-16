@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IProfessionalQualification } from 'app/shared/model/professional-qualification.model';
+import { IProfessionalQualification } from 'app/shared/model/gdi/professional-qualification.model';
 import { searchEntities, getEntities } from './professional-qualification.reducer';
 
 export const ProfessionalQualification = () => {

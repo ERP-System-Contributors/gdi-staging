@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICurrencyAuthenticityFlag } from 'app/shared/model/currency-authenticity-flag.model';
+import { ICurrencyAuthenticityFlag } from 'app/shared/model/gdi/currency-authenticity-flag.model';
 import { searchEntities, getEntities } from './currency-authenticity-flag.reducer';
 
 export const CurrencyAuthenticityFlag = () => {

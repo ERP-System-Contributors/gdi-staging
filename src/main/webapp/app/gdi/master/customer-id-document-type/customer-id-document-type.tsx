@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICustomerIDDocumentType } from 'app/shared/model/customer-id-document-type.model';
+import { ICustomerIDDocumentType } from 'app/shared/model/gdi/customer-id-document-type.model';
 import { searchEntities, getEntities } from './customer-id-document-type.reducer';
 
 export const CustomerIDDocumentType = () => {

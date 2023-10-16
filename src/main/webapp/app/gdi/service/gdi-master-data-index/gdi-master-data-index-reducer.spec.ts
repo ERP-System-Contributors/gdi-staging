@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './gdi-master-data-index.reducer';
 import { EntityState } from '../../../shared/reducers/reducer.utils';
-import { IGdiMasterDataIndex, defaultValue } from '../../../shared/model/gdi-master-data-index.model';
+import { IGdiMasterDataIndex, defaultValue } from '../../../shared/model/gdi/gdi-master-data-index.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IIsoCurrencyCode } from 'app/shared/model/iso-currency-code.model';
+import { IIsoCurrencyCode } from 'app/shared/model/gdi/iso-currency-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './iso-currency-code.reducer';
 
 export const IsoCurrencyCodeUpdate = () => {

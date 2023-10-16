@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './fx-customer-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFxCustomerType, defaultValue } from 'app/shared/model/fx-customer-type.model';
+import { IFxCustomerType, defaultValue } from 'app/shared/model/gdi/fx-customer-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISnaSectorCode } from 'app/shared/model/sna-sector-code.model';
+import { ISnaSectorCode } from 'app/shared/model/gdi/sna-sector-code.model';
 import { searchEntities, getEntities } from './sna-sector-code.reducer';
 
 export const SnaSectorCode = () => {

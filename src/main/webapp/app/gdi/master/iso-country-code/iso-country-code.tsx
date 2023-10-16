@@ -10,7 +10,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IIsoCountryCode } from 'app/shared/model/iso-country-code.model';
+import { IIsoCountryCode } from 'app/shared/model/gdi/iso-country-code.model';
 import { searchEntities, getEntities, reset } from './iso-country-code.reducer';
 
 export const IsoCountryCode = () => {

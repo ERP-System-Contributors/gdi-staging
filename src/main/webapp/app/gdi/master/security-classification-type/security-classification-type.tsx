@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISecurityClassificationType } from 'app/shared/model/security-classification-type.model';
+import { ISecurityClassificationType } from 'app/shared/model/gdi/security-classification-type.model';
 import { searchEntities, getEntities } from './security-classification-type.reducer';
 
 export const SecurityClassificationType = () => {

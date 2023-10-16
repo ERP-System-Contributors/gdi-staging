@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './customer-id-document-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICustomerIDDocumentType, defaultValue } from 'app/shared/model/customer-id-document-type.model';
+import { ICustomerIDDocumentType, defaultValue } from 'app/shared/model/gdi/customer-id-document-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

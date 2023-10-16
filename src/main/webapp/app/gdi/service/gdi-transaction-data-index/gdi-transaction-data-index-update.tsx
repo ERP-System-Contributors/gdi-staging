@@ -8,9 +8,9 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiMasterDataIndex } from 'app/shared/model/gdi-master-data-index.model';
+import { IGdiMasterDataIndex } from 'app/shared/model/gdi/gdi-master-data-index.model';
 import { getEntities as getGdiMasterDataIndices } from '../gdi-master-data-index/gdi-master-data-index.reducer';
-import { IGdiTransactionDataIndex } from 'app/shared/model/gdi-transaction-data-index.model';
+import { IGdiTransactionDataIndex } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
 import { UpdateFrequencyTypes } from 'app/shared/model/enumerations/update-frequency-types.model';
 import { DatasetBehaviorTypes } from 'app/shared/model/enumerations/dataset-behavior-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './gdi-transaction-data-index.reducer';

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './iso-currency-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IIsoCurrencyCode, defaultValue } from 'app/shared/model/iso-currency-code.model';
+import { IIsoCurrencyCode, defaultValue } from 'app/shared/model/gdi/iso-currency-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

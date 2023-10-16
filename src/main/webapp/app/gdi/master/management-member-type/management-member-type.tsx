@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IManagementMemberType } from 'app/shared/model/management-member-type.model';
+import { IManagementMemberType } from 'app/shared/model/gdi/management-member-type.model';
 import { searchEntities, getEntities } from './management-member-type.reducer';
 
 export const ManagementMemberType = () => {

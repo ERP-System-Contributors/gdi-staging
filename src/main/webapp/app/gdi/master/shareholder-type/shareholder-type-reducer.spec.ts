@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './shareholder-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IShareholderType, defaultValue } from 'app/shared/model/shareholder-type.model';
+import { IShareholderType, defaultValue } from 'app/shared/model/gdi/shareholder-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

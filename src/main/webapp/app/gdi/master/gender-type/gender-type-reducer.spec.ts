@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './gender-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IGenderType, defaultValue } from 'app/shared/model/gender-type.model';
+import { IGenderType, defaultValue } from 'app/shared/model/gdi/gender-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

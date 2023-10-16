@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFraudType } from 'app/shared/model/fraud-type.model';
+import { IFraudType } from 'app/shared/model/gdi/fraud-type.model';
 import { searchEntities, getEntities } from './fraud-type.reducer';
 
 export const FraudType = () => {

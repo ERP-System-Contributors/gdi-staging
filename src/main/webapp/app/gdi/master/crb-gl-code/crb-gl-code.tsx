@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbGlCode } from 'app/shared/model/crb-gl-code.model';
+import { ICrbGlCode } from 'app/shared/model/gdi/crb-gl-code.model';
 import { searchEntities, getEntities } from './crb-gl-code.reducer';
 
 export const CrbGlCode = () => {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbSubscriptionStatusTypeCode } from 'app/shared/model/crb-subscription-status-type-code.model';
+import { ICrbSubscriptionStatusTypeCode } from 'app/shared/model/gdi/crb-subscription-status-type-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-subscription-status-type-code.reducer';
 
 export const CrbSubscriptionStatusTypeCodeUpdate = () => {

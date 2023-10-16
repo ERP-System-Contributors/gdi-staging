@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './management-member-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IManagementMemberType, defaultValue } from 'app/shared/model/management-member-type.model';
+import { IManagementMemberType, defaultValue } from 'app/shared/model/gdi/management-member-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

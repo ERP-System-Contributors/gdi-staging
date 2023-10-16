@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ISourceRemittancePurposeType, defaultValue } from 'app/shared/model/source-remittance-purpose-type.model';
+import { ISourceRemittancePurposeType, defaultValue } from 'app/shared/model/gdi/source-remittance-purpose-type.model';
 
 const initialState: EntityState<ISourceRemittancePurposeType> = {
   loading: false,

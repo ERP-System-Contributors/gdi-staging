@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISourcesOfFundsTypeCode } from 'app/shared/model/sources-of-funds-type-code.model';
+import { ISourcesOfFundsTypeCode } from 'app/shared/model/gdi/sources-of-funds-type-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './sources-of-funds-type-code.reducer';
 
 export const SourcesOfFundsTypeCodeUpdate = () => {

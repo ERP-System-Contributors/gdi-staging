@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './reasons-for-bounced-cheque.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IReasonsForBouncedCheque, defaultValue } from 'app/shared/model/reasons-for-bounced-cheque.model';
+import { IReasonsForBouncedCheque, defaultValue } from 'app/shared/model/gdi/reasons-for-bounced-cheque.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

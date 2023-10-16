@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IDerivativeSubType } from 'app/shared/model/derivative-sub-type.model';
+import { IDerivativeSubType } from 'app/shared/model/gdi/derivative-sub-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './derivative-sub-type.reducer';
 
 export const DerivativeSubTypeUpdate = () => {

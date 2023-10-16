@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ISnaSectorCode, defaultValue } from 'app/shared/model/sna-sector-code.model';
+import { ISnaSectorCode, defaultValue } from 'app/shared/model/gdi/sna-sector-code.model';
 
 const initialState: EntityState<ISnaSectorCode> = {
   loading: false,

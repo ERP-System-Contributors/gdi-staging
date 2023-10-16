@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IInterbankSectorCode, defaultValue } from 'app/shared/model/interbank-sector-code.model';
+import { IInterbankSectorCode, defaultValue } from 'app/shared/model/gdi/interbank-sector-code.model';
 
 const initialState: EntityState<IInterbankSectorCode> = {
   loading: false,

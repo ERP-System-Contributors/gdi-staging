@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './acquiring-issuing-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IAcquiringIssuingFlag, defaultValue } from 'app/shared/model/acquiring-issuing-flag.model';
+import { IAcquiringIssuingFlag, defaultValue } from 'app/shared/model/gdi/acquiring-issuing-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

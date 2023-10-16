@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './isic-economic-activity.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IIsicEconomicActivity, defaultValue } from 'app/shared/model/isic-economic-activity.model';
+import { IIsicEconomicActivity, defaultValue } from 'app/shared/model/gdi/isic-economic-activity.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

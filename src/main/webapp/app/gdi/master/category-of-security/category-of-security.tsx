@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICategoryOfSecurity } from 'app/shared/model/category-of-security.model';
+import { ICategoryOfSecurity } from 'app/shared/model/gdi/category-of-security.model';
 import { searchEntities, getEntities } from './category-of-security.reducer';
 
 export const CategoryOfSecurity = () => {

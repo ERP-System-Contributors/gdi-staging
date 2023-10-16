@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IExecutiveCategoryType } from 'app/shared/model/executive-category-type.model';
+import { IExecutiveCategoryType } from 'app/shared/model/gdi/executive-category-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './executive-category-type.reducer';
 
 export const ExecutiveCategoryTypeUpdate = () => {

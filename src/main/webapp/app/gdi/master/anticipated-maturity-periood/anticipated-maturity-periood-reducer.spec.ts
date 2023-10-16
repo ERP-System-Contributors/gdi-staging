@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './anticipated-maturity-periood.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IAnticipatedMaturityPeriood, defaultValue } from 'app/shared/model/anticipated-maturity-periood.model';
+import { IAnticipatedMaturityPeriood, defaultValue } from 'app/shared/model/gdi/anticipated-maturity-periood.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IInstitutionContactDetails, defaultValue } from 'app/shared/model/institution-contact-details.model';
+import { IInstitutionContactDetails, defaultValue } from 'app/shared/model/gdi/institution-contact-details.model';
 
 const initialState: EntityState<IInstitutionContactDetails> = {
   loading: false,

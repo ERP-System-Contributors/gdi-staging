@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICardCategoryType } from 'app/shared/model/card-category-type.model';
+import { ICardCategoryType } from 'app/shared/model/gdi/card-category-type.model';
 import { searchEntities, getEntities } from './card-category-type.reducer';
 
 export const CardCategoryType = () => {

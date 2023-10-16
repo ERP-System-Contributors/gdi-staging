@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './outlet-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IOutletType, defaultValue } from 'app/shared/model/outlet-type.model';
+import { IOutletType, defaultValue } from 'app/shared/model/gdi/outlet-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

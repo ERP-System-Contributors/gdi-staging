@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbRecordFileType } from 'app/shared/model/crb-record-file-type.model';
+import { ICrbRecordFileType } from 'app/shared/model/gdi/crb-record-file-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-record-file-type.reducer';
 
 export const CrbRecordFileTypeUpdate = () => {

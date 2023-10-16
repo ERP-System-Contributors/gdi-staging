@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAnticipatedMaturityPeriood } from 'app/shared/model/anticipated-maturity-periood.model';
+import { IAnticipatedMaturityPeriood } from 'app/shared/model/gdi/anticipated-maturity-periood.model';
 import { getEntity, updateEntity, createEntity, reset } from './anticipated-maturity-periood.reducer';
 
 export const AnticipatedMaturityPerioodUpdate = () => {

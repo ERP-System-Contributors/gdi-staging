@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInterestCalcMethod } from 'app/shared/model/interest-calc-method.model';
+import { IInterestCalcMethod } from 'app/shared/model/gdi/interest-calc-method.model';
 import { getEntity, updateEntity, createEntity, reset } from './interest-calc-method.reducer';
 
 export const InterestCalcMethodUpdate = () => {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICounterPartyCategory } from 'app/shared/model/counter-party-category.model';
+import { ICounterPartyCategory } from 'app/shared/model/gdi/counter-party-category.model';
 import { CounterpartyCategory } from 'app/shared/model/enumerations/counterparty-category.model';
 import { getEntity, updateEntity, createEntity, reset } from './counter-party-category.reducer';
 

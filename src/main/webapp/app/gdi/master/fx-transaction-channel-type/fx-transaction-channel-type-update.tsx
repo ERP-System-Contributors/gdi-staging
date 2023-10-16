@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxTransactionChannelType } from 'app/shared/model/fx-transaction-channel-type.model';
+import { IFxTransactionChannelType } from 'app/shared/model/gdi/fx-transaction-channel-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './fx-transaction-channel-type.reducer';
 
 export const FxTransactionChannelTypeUpdate = () => {

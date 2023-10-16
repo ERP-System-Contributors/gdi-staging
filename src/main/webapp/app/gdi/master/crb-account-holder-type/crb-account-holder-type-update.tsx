@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbAccountHolderType } from 'app/shared/model/crb-account-holder-type.model';
+import { ICrbAccountHolderType } from 'app/shared/model/gdi/crb-account-holder-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-account-holder-type.reducer';
 
 export const CrbAccountHolderTypeUpdate = () => {

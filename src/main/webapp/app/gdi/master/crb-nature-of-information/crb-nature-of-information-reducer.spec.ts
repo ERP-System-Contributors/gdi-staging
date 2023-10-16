@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-nature-of-information.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbNatureOfInformation, defaultValue } from 'app/shared/model/crb-nature-of-information.model';
+import { ICrbNatureOfInformation, defaultValue } from 'app/shared/model/gdi/crb-nature-of-information.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

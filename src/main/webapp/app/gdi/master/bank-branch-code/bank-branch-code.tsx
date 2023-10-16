@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IBankBranchCode } from 'app/shared/model/bank-branch-code.model';
+import { IBankBranchCode } from 'app/shared/model/gdi/bank-branch-code.model';
 import { searchEntities, getEntities } from './bank-branch-code.reducer';
 
 export const BankBranchCode = () => {

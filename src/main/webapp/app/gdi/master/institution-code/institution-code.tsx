@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInstitutionCode } from 'app/shared/model/institution-code.model';
+import { IInstitutionCode } from 'app/shared/model/gdi/institution-code.model';
 import { searchEntities, getEntities } from './institution-code.reducer';
 
 export const InstitutionCode = () => {

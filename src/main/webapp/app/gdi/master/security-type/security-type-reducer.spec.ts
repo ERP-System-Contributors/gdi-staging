@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './security-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ISecurityType, defaultValue } from 'app/shared/model/security-type.model';
+import { ISecurityType, defaultValue } from 'app/shared/model/gdi/security-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

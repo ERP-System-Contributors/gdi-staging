@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './employment-terms.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IEmploymentTerms, defaultValue } from 'app/shared/model/employment-terms.model';
+import { IEmploymentTerms, defaultValue } from 'app/shared/model/gdi/employment-terms.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

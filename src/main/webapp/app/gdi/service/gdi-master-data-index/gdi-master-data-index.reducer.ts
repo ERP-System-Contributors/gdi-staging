@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IGdiMasterDataIndex, defaultValue } from 'app/shared/model/gdi-master-data-index.model';
+import { IGdiMasterDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-master-data-index.model';
 
 const initialState: EntityState<IGdiMasterDataIndex> = {
   loading: false,

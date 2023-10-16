@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ITerminalFunctions } from 'app/shared/model/terminal-functions.model';
+import { ITerminalFunctions } from 'app/shared/model/gdi/terminal-functions.model';
 import { searchEntities, getEntities } from './terminal-functions.reducer';
 
 export const TerminalFunctions = () => {

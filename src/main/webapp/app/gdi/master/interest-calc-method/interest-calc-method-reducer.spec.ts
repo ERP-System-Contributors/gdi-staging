@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './interest-calc-method.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IInterestCalcMethod, defaultValue } from 'app/shared/model/interest-calc-method.model';
+import { IInterestCalcMethod, defaultValue } from 'app/shared/model/gdi/interest-calc-method.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

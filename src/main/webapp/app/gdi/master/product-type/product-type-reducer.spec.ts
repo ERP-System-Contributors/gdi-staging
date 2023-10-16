@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './product-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IProductType, defaultValue } from 'app/shared/model/product-type.model';
+import { IProductType, defaultValue } from 'app/shared/model/gdi/product-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

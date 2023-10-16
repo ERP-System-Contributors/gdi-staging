@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICounterPartyCategory } from 'app/shared/model/counter-party-category.model';
+import { ICounterPartyCategory } from 'app/shared/model/gdi/counter-party-category.model';
 import { searchEntities, getEntities } from './counter-party-category.reducer';
 
 export const CounterPartyCategory = () => {

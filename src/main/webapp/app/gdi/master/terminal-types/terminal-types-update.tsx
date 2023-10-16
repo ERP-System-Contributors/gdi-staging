@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ITerminalTypes } from 'app/shared/model/terminal-types.model';
+import { ITerminalTypes } from 'app/shared/model/gdi/terminal-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './terminal-types.reducer';
 
 export const TerminalTypesUpdate = () => {

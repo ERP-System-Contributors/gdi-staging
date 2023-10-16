@@ -4,7 +4,7 @@ import { loadMoreDataWhenScrolled, parseHeaderForLinks } from 'react-jhipster';
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICountyCode, defaultValue } from 'app/shared/model/county-code.model';
+import { ICountyCode, defaultValue } from 'app/shared/model/gdi/county-code.model';
 
 const initialState: EntityState<ICountyCode> = {
   loading: false,

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-complaint-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbComplaintType, defaultValue } from 'app/shared/model/crb-complaint-type.model';
+import { ICrbComplaintType, defaultValue } from 'app/shared/model/gdi/crb-complaint-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

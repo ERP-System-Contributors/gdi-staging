@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-account-status.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbAccountStatus, defaultValue } from 'app/shared/model/crb-account-status.model';
+import { ICrbAccountStatus, defaultValue } from 'app/shared/model/gdi/crb-account-status.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

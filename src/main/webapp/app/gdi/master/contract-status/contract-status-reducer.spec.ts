@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './contract-status.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IContractStatus, defaultValue } from 'app/shared/model/contract-status.model';
+import { IContractStatus, defaultValue } from 'app/shared/model/gdi/contract-status.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

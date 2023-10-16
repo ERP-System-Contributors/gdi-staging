@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-credit-facility-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbCreditFacilityType, defaultValue } from 'app/shared/model/crb-credit-facility-type.model';
+import { ICrbCreditFacilityType, defaultValue } from 'app/shared/model/gdi/crb-credit-facility-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

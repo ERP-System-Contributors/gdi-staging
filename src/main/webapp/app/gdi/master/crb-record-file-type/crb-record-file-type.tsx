@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbRecordFileType } from 'app/shared/model/crb-record-file-type.model';
+import { ICrbRecordFileType } from 'app/shared/model/gdi/crb-record-file-type.model';
 import { searchEntities, getEntities } from './crb-record-file-type.reducer';
 
 export const CrbRecordFileType = () => {

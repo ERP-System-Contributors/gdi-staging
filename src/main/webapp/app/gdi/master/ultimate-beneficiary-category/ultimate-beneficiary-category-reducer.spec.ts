@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './ultimate-beneficiary-category.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IUltimateBeneficiaryCategory, defaultValue } from 'app/shared/model/ultimate-beneficiary-category.model';
+import { IUltimateBeneficiaryCategory, defaultValue } from 'app/shared/model/gdi/ultimate-beneficiary-category.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbAmountCategoryBand } from 'app/shared/model/crb-amount-category-band.model';
+import { ICrbAmountCategoryBand } from 'app/shared/model/gdi/crb-amount-category-band.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-amount-category-band.reducer';
 
 export const CrbAmountCategoryBandUpdate = () => {

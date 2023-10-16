@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './customer-complaint-status-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICustomerComplaintStatusType, defaultValue } from 'app/shared/model/customer-complaint-status-type.model';
+import { ICustomerComplaintStatusType, defaultValue } from 'app/shared/model/gdi/customer-complaint-status-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

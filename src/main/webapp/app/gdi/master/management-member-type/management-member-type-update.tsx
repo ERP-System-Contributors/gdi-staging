@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IManagementMemberType } from 'app/shared/model/management-member-type.model';
+import { IManagementMemberType } from 'app/shared/model/gdi/management-member-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './management-member-type.reducer';
 
 export const ManagementMemberTypeUpdate = () => {

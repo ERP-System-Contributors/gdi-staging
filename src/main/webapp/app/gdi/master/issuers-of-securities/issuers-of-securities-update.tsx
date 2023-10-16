@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IIssuersOfSecurities } from 'app/shared/model/issuers-of-securities.model';
+import { IIssuersOfSecurities } from 'app/shared/model/gdi/issuers-of-securities.model';
 import { getEntity, updateEntity, createEntity, reset } from './issuers-of-securities.reducer';
 
 export const IssuersOfSecuritiesUpdate = () => {

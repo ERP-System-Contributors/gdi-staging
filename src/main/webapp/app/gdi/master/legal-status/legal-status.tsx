@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILegalStatus } from 'app/shared/model/legal-status.model';
+import { ILegalStatus } from 'app/shared/model/gdi/legal-status.model';
 import { searchEntities, getEntities } from './legal-status.reducer';
 
 export const LegalStatus = () => {

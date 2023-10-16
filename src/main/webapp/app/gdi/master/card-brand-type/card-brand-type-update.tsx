@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICardBrandType } from 'app/shared/model/card-brand-type.model';
+import { ICardBrandType } from 'app/shared/model/gdi/card-brand-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './card-brand-type.reducer';
 
 export const CardBrandTypeUpdate = () => {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxCustomerType } from 'app/shared/model/fx-customer-type.model';
+import { IFxCustomerType } from 'app/shared/model/gdi/fx-customer-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './fx-customer-type.reducer';
 
 export const FxCustomerTypeUpdate = () => {

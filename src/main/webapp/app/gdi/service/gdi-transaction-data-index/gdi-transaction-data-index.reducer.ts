@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IGdiTransactionDataIndex, defaultValue } from 'app/shared/model/gdi-transaction-data-index.model';
+import { IGdiTransactionDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
 
 const initialState: EntityState<IGdiTransactionDataIndex> = {
   loading: false,

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbAgingBands } from 'app/shared/model/crb-aging-bands.model';
+import { ICrbAgingBands } from 'app/shared/model/gdi/crb-aging-bands.model';
 import { searchEntities, getEntities } from './crb-aging-bands.reducer';
 
 export const CrbAgingBands = () => {

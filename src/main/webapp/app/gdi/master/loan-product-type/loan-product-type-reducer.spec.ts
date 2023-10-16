@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './loan-product-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILoanProductType, defaultValue } from 'app/shared/model/loan-product-type.model';
+import { ILoanProductType, defaultValue } from 'app/shared/model/gdi/loan-product-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

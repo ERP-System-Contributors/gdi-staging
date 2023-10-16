@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { INatureOfCustomerComplaints } from 'app/shared/model/nature-of-customer-complaints.model';
+import { INatureOfCustomerComplaints } from 'app/shared/model/gdi/nature-of-customer-complaints.model';
 import { searchEntities, getEntities } from './nature-of-customer-complaints.reducer';
 
 export const NatureOfCustomerComplaints = () => {

@@ -10,7 +10,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IPlaceholder } from 'app/shared/model/service/placeholder.model';
 import { getEntities as getPlaceholders } from 'app/gdi/service/placeholder/placeholder.reducer';
-import { ICountyCode } from 'app/shared/model/county-code.model';
+import { ICountyCode } from 'app/shared/model/gdi/county-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './county-code.reducer';
 
 export const CountyCodeUpdate = () => {

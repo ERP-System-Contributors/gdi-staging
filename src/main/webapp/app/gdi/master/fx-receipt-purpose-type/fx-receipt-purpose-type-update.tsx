@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxReceiptPurposeType } from 'app/shared/model/fx-receipt-purpose-type.model';
+import { IFxReceiptPurposeType } from 'app/shared/model/gdi/fx-receipt-purpose-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './fx-receipt-purpose-type.reducer';
 
 export const FxReceiptPurposeTypeUpdate = () => {

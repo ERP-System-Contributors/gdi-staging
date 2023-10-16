@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInsiderCategoryTypes } from 'app/shared/model/insider-category-types.model';
+import { IInsiderCategoryTypes } from 'app/shared/model/gdi/insider-category-types.model';
 import { searchEntities, getEntities } from './insider-category-types.reducer';
 
 export const InsiderCategoryTypes = () => {

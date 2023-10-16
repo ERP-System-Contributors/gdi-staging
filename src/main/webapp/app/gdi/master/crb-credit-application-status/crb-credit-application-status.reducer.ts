@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICrbCreditApplicationStatus, defaultValue } from 'app/shared/model/crb-credit-application-status.model';
+import { ICrbCreditApplicationStatus, defaultValue } from 'app/shared/model/gdi/crb-credit-application-status.model';
 
 const initialState: EntityState<ICrbCreditApplicationStatus> = {
   loading: false,

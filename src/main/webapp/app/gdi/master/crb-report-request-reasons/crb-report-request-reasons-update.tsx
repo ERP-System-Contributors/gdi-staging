@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbReportRequestReasons } from 'app/shared/model/crb-report-request-reasons.model';
+import { ICrbReportRequestReasons } from 'app/shared/model/gdi/crb-report-request-reasons.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-report-request-reasons.reducer';
 
 export const CrbReportRequestReasonsUpdate = () => {

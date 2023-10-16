@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAccountStatusType } from 'app/shared/model/account-status-type.model';
+import { IAccountStatusType } from 'app/shared/model/gdi/account-status-type.model';
 import { AccountStatusTypes } from 'app/shared/model/enumerations/account-status-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './account-status-type.reducer';
 

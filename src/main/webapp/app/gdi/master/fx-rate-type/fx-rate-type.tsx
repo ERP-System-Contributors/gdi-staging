@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxRateType } from 'app/shared/model/fx-rate-type.model';
+import { IFxRateType } from 'app/shared/model/gdi/fx-rate-type.model';
 import { searchEntities, getEntities } from './fx-rate-type.reducer';
 
 export const FxRateType = () => {

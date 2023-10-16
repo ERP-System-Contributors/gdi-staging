@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IBouncedChequeCategories, defaultValue } from 'app/shared/model/bounced-cheque-categories.model';
+import { IBouncedChequeCategories, defaultValue } from 'app/shared/model/gdi/bounced-cheque-categories.model';
 
 const initialState: EntityState<IBouncedChequeCategories> = {
   loading: false,

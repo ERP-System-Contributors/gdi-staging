@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './sources-of-funds-type-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ISourcesOfFundsTypeCode, defaultValue } from 'app/shared/model/sources-of-funds-type-code.model';
+import { ISourcesOfFundsTypeCode, defaultValue } from 'app/shared/model/gdi/sources-of-funds-type-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

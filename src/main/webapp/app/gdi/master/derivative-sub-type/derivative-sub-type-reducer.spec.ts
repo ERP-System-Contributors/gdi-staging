@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './derivative-sub-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IDerivativeSubType, defaultValue } from 'app/shared/model/derivative-sub-type.model';
+import { IDerivativeSubType, defaultValue } from 'app/shared/model/gdi/derivative-sub-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

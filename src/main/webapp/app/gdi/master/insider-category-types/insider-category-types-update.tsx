@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInsiderCategoryTypes } from 'app/shared/model/insider-category-types.model';
+import { IInsiderCategoryTypes } from 'app/shared/model/gdi/insider-category-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './insider-category-types.reducer';
 
 export const InsiderCategoryTypesUpdate = () => {

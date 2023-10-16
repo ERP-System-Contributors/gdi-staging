@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './legal-status.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILegalStatus, defaultValue } from 'app/shared/model/legal-status.model';
+import { ILegalStatus, defaultValue } from 'app/shared/model/gdi/legal-status.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

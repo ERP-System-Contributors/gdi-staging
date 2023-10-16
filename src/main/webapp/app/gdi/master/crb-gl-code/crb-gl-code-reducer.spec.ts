@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-gl-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbGlCode, defaultValue } from 'app/shared/model/crb-gl-code.model';
+import { ICrbGlCode, defaultValue } from 'app/shared/model/gdi/crb-gl-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

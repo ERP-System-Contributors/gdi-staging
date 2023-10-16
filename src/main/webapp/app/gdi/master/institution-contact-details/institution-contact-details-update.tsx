@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInstitutionContactDetails } from 'app/shared/model/institution-contact-details.model';
+import { IInstitutionContactDetails } from 'app/shared/model/gdi/institution-contact-details.model';
 import { getEntity, updateEntity, createEntity, reset } from './institution-contact-details.reducer';
 
 export const InstitutionContactDetailsUpdate = () => {

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './card-status-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICardStatusFlag, defaultValue } from 'app/shared/model/card-status-flag.model';
+import { ICardStatusFlag, defaultValue } from 'app/shared/model/gdi/card-status-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

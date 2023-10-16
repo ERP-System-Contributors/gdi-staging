@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICardFraudIncidentCategory, defaultValue } from 'app/shared/model/card-fraud-incident-category.model';
+import { ICardFraudIncidentCategory, defaultValue } from 'app/shared/model/gdi/card-fraud-incident-category.model';
 
 const initialState: EntityState<ICardFraudIncidentCategory> = {
   loading: false,

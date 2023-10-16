@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGlMapping } from 'app/shared/model/gl-mapping.model';
+import { IGlMapping } from 'app/shared/model/gdi/gl-mapping.model';
 import { getEntity, updateEntity, createEntity, reset } from './gl-mapping.reducer';
 
 export const GlMappingUpdate = () => {

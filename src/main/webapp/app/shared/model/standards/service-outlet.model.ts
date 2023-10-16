@@ -1,8 +1,8 @@
 import dayjs from 'dayjs';
 import { IPlaceholder } from 'app/shared/model/service/placeholder.model';
 import { IBankBranchCode } from 'app/shared/model/standards/bank-branch-code.model';
-import { IOutletType } from 'app/shared/model/outlet-type.model';
-import { IOutletStatus } from 'app/shared/model/outlet-status.model';
+import { IOutletType } from 'app/shared/model/gdi-data/outlet-type.model';
+import { IOutletStatus } from 'app/shared/model/gdi-data/outlet-status.model';
 import { ICountyCode } from 'app/shared/model/standards/county-code.model';
 
 export interface IServiceOutlet {

@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IOutletType, defaultValue } from 'app/shared/model/outlet-type.model';
+import { IOutletType, defaultValue } from 'app/shared/model/gdi/outlet-type.model';
 
 const initialState: EntityState<IOutletType> = {
   loading: false,

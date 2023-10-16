@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './chart-of-accounts-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IChartOfAccountsCode, defaultValue } from 'app/shared/model/chart-of-accounts-code.model';
+import { IChartOfAccountsCode, defaultValue } from 'app/shared/model/gdi/chart-of-accounts-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

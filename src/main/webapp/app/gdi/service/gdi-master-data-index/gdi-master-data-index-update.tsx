@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiMasterDataIndex } from 'app/shared/model/gdi-master-data-index.model';
+import { IGdiMasterDataIndex } from 'app/shared/model/gdi/gdi-master-data-index.model';
 import { getEntity, updateEntity, createEntity, reset } from './gdi-master-data-index.reducer';
 
 export const GdiMasterDataIndexUpdate = () => {

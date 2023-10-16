@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IPartyRelationType } from 'app/shared/model/party-relation-type.model';
+import { IPartyRelationType } from 'app/shared/model/gdi/party-relation-type.model';
 import { searchEntities, getEntities } from './party-relation-type.reducer';
 
 export const PartyRelationType = () => {

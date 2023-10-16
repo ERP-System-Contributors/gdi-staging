@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISubCountyCode } from 'app/shared/model/sub-county-code.model';
+import { ISubCountyCode } from 'app/shared/model/gdi/sub-county-code.model';
 import { searchEntities, getEntities } from './sub-county-code.reducer';
 
 export const SubCountyCode = () => {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILegalStatus } from 'app/shared/model/legal-status.model';
+import { ILegalStatus } from 'app/shared/model/gdi/legal-status.model';
 import { getEntity, updateEntity, createEntity, reset } from './legal-status.reducer';
 
 export const LegalStatusUpdate = () => {

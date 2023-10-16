@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './staff-current-employment-status.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IStaffCurrentEmploymentStatus, defaultValue } from 'app/shared/model/staff-current-employment-status.model';
+import { IStaffCurrentEmploymentStatus, defaultValue } from 'app/shared/model/gdi/staff-current-employment-status.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

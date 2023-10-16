@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInstitutionContactDetails } from 'app/shared/model/institution-contact-details.model';
+import { IInstitutionContactDetails } from 'app/shared/model/gdi/institution-contact-details.model';
 import { searchEntities, getEntities } from './institution-contact-details.reducer';
 
 export const InstitutionContactDetails = () => {

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './account-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IAccountType, defaultValue } from 'app/shared/model/account-type.model';
+import { IAccountType, defaultValue } from 'app/shared/model/gdi/account-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

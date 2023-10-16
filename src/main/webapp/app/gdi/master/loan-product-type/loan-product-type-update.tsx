@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILoanProductType } from 'app/shared/model/loan-product-type.model';
+import { ILoanProductType } from 'app/shared/model/gdi/loan-product-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './loan-product-type.reducer';
 
 export const LoanProductTypeUpdate = () => {

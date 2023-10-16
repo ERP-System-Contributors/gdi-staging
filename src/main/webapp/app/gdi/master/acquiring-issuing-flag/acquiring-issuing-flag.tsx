@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAcquiringIssuingFlag } from 'app/shared/model/acquiring-issuing-flag.model';
+import { IAcquiringIssuingFlag } from 'app/shared/model/gdi/acquiring-issuing-flag.model';
 import { searchEntities, getEntities } from './acquiring-issuing-flag.reducer';
 
 export const AcquiringIssuingFlag = () => {

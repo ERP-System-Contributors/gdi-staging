@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './executive-category-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IExecutiveCategoryType, defaultValue } from 'app/shared/model/executive-category-type.model';
+import { IExecutiveCategoryType, defaultValue } from 'app/shared/model/gdi/executive-category-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

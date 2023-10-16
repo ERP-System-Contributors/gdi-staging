@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbNatureOfInformation } from 'app/shared/model/crb-nature-of-information.model';
+import { ICrbNatureOfInformation } from 'app/shared/model/gdi/crb-nature-of-information.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-nature-of-information.reducer';
 
 export const CrbNatureOfInformationUpdate = () => {

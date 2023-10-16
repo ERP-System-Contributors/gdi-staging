@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './bank-transaction-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IBankTransactionType, defaultValue } from 'app/shared/model/bank-transaction-type.model';
+import { IBankTransactionType, defaultValue } from 'app/shared/model/gdi/bank-transaction-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IEmploymentTerms } from 'app/shared/model/employment-terms.model';
+import { IEmploymentTerms } from 'app/shared/model/gdi/employment-terms.model';
 import { searchEntities, getEntities } from './employment-terms.reducer';
 
 export const EmploymentTerms = () => {

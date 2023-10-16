@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './customer-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICustomerType, defaultValue } from 'app/shared/model/customer-type.model';
+import { ICustomerType, defaultValue } from 'app/shared/model/gdi/customer-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

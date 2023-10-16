@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IMoratoriumItem } from 'app/shared/model/moratorium-item.model';
+import { IMoratoriumItem } from 'app/shared/model/gdi/moratorium-item.model';
 import { searchEntities, getEntities } from './moratorium-item.reducer';
 
 export const MoratoriumItem = () => {

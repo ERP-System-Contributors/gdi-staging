@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './card-charges.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICardCharges, defaultValue } from 'app/shared/model/card-charges.model';
+import { ICardCharges, defaultValue } from 'app/shared/model/gdi/card-charges.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

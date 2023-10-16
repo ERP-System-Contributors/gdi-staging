@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISourcesOfFundsTypeCode } from 'app/shared/model/sources-of-funds-type-code.model';
+import { ISourcesOfFundsTypeCode } from 'app/shared/model/gdi/sources-of-funds-type-code.model';
 import { searchEntities, getEntities } from './sources-of-funds-type-code.reducer';
 
 export const SourcesOfFundsTypeCode = () => {

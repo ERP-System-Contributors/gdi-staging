@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAgriculturalEnterpriseActivityType } from 'app/shared/model/agricultural-enterprise-activity-type.model';
+import { IAgriculturalEnterpriseActivityType } from 'app/shared/model/gdi/agricultural-enterprise-activity-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './agricultural-enterprise-activity-type.reducer';
 
 export const AgriculturalEnterpriseActivityTypeUpdate = () => {

@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IAnticipatedMaturityPeriood, defaultValue } from 'app/shared/model/anticipated-maturity-periood.model';
+import { IAnticipatedMaturityPeriood, defaultValue } from 'app/shared/model/gdi/anticipated-maturity-periood.model';
 
 const initialState: EntityState<IAnticipatedMaturityPeriood> = {
   loading: false,

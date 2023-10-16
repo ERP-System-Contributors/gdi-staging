@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './fx-transaction-channel-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFxTransactionChannelType, defaultValue } from 'app/shared/model/fx-transaction-channel-type.model';
+import { IFxTransactionChannelType, defaultValue } from 'app/shared/model/gdi/fx-transaction-channel-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

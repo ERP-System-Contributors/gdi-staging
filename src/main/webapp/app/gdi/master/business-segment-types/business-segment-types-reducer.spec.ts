@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './business-segment-types.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IBusinessSegmentTypes, defaultValue } from 'app/shared/model/business-segment-types.model';
+import { IBusinessSegmentTypes, defaultValue } from 'app/shared/model/gdi/business-segment-types.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAnticipatedMaturityPeriood } from 'app/shared/model/anticipated-maturity-periood.model';
+import { IAnticipatedMaturityPeriood } from 'app/shared/model/gdi/anticipated-maturity-periood.model';
 import { searchEntities, getEntities } from './anticipated-maturity-periood.reducer';
 
 export const AnticipatedMaturityPeriood = () => {

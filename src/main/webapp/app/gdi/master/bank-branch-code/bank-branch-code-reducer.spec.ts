@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './bank-branch-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IBankBranchCode, defaultValue } from 'app/shared/model/bank-branch-code.model';
+import { IBankBranchCode, defaultValue } from 'app/shared/model/gdi/bank-branch-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

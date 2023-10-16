@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICardFraudIncidentCategory } from 'app/shared/model/card-fraud-incident-category.model';
+import { ICardFraudIncidentCategory } from 'app/shared/model/gdi/card-fraud-incident-category.model';
 import { getEntity, updateEntity, createEntity, reset } from './card-fraud-incident-category.reducer';
 
 export const CardFraudIncidentCategoryUpdate = () => {

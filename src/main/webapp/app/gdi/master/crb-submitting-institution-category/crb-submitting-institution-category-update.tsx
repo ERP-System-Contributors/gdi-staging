@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbSubmittingInstitutionCategory } from 'app/shared/model/crb-submitting-institution-category.model';
+import { ICrbSubmittingInstitutionCategory } from 'app/shared/model/gdi/crb-submitting-institution-category.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-submitting-institution-category.reducer';
 
 export const CrbSubmittingInstitutionCategoryUpdate = () => {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IDerivativeSubType } from 'app/shared/model/derivative-sub-type.model';
+import { IDerivativeSubType } from 'app/shared/model/gdi/derivative-sub-type.model';
 import { searchEntities, getEntities } from './derivative-sub-type.reducer';
 
 export const DerivativeSubType = () => {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISecurityTenure } from 'app/shared/model/security-tenure.model';
+import { ISecurityTenure } from 'app/shared/model/gdi/security-tenure.model';
 import { searchEntities, getEntities } from './security-tenure.reducer';
 
 export const SecurityTenure = () => {

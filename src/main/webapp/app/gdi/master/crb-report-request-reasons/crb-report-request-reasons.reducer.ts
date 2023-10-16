@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICrbReportRequestReasons, defaultValue } from 'app/shared/model/crb-report-request-reasons.model';
+import { ICrbReportRequestReasons, defaultValue } from 'app/shared/model/gdi/crb-report-request-reasons.model';
 
 const initialState: EntityState<ICrbReportRequestReasons> = {
   loading: false,

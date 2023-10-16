@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-agent-service-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbAgentServiceType, defaultValue } from 'app/shared/model/crb-agent-service-type.model';
+import { ICrbAgentServiceType, defaultValue } from 'app/shared/model/gdi/crb-agent-service-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IEmploymentTerms } from 'app/shared/model/employment-terms.model';
+import { IEmploymentTerms } from 'app/shared/model/gdi/employment-terms.model';
 import { getEntity, updateEntity, createEntity, reset } from './employment-terms.reducer';
 
 export const EmploymentTermsUpdate = () => {

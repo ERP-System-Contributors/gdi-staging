@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IFinancialDerivativeTypeCode, defaultValue } from 'app/shared/model/financial-derivative-type-code.model';
+import { IFinancialDerivativeTypeCode, defaultValue } from 'app/shared/model/gdi/financial-derivative-type-code.model';
 
 const initialState: EntityState<IFinancialDerivativeTypeCode> = {
   loading: false,

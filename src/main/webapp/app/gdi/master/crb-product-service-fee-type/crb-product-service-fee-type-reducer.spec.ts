@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-product-service-fee-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbProductServiceFeeType, defaultValue } from 'app/shared/model/crb-product-service-fee-type.model';
+import { ICrbProductServiceFeeType, defaultValue } from 'app/shared/model/gdi/crb-product-service-fee-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

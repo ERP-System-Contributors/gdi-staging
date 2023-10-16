@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICounterpartyType } from 'app/shared/model/counterparty-type.model';
+import { ICounterpartyType } from 'app/shared/model/gdi/counterparty-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './counterparty-type.reducer';
 
 export const CounterpartyTypeUpdate = () => {

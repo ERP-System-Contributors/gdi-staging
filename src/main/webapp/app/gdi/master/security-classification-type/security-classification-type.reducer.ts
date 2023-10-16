@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ISecurityClassificationType, defaultValue } from 'app/shared/model/security-classification-type.model';
+import { ISecurityClassificationType, defaultValue } from 'app/shared/model/gdi/security-classification-type.model';
 
 const initialState: EntityState<ISecurityClassificationType> = {
   loading: false,

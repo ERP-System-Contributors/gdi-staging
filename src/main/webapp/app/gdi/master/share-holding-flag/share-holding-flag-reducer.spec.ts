@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './share-holding-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IShareHoldingFlag, defaultValue } from 'app/shared/model/share-holding-flag.model';
+import { IShareHoldingFlag, defaultValue } from 'app/shared/model/gdi/share-holding-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

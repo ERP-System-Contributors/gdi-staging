@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbFileTransmissionStatus } from 'app/shared/model/crb-file-transmission-status.model';
+import { ICrbFileTransmissionStatus } from 'app/shared/model/gdi/crb-file-transmission-status.model';
 import { SubmittedFileStatusTypes } from 'app/shared/model/enumerations/submitted-file-status-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-file-transmission-status.reducer';
 

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './kenyan-currency-denomination.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IKenyanCurrencyDenomination, defaultValue } from 'app/shared/model/kenyan-currency-denomination.model';
+import { IKenyanCurrencyDenomination, defaultValue } from 'app/shared/model/gdi/kenyan-currency-denomination.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

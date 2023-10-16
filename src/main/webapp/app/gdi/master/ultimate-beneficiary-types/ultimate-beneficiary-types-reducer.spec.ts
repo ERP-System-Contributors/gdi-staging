@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './ultimate-beneficiary-types.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IUltimateBeneficiaryTypes, defaultValue } from 'app/shared/model/ultimate-beneficiary-types.model';
+import { IUltimateBeneficiaryTypes, defaultValue } from 'app/shared/model/gdi/ultimate-beneficiary-types.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

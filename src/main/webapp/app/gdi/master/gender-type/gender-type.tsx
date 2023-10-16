@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGenderType } from 'app/shared/model/gender-type.model';
+import { IGenderType } from 'app/shared/model/gdi/gender-type.model';
 import { searchEntities, getEntities } from './gender-type.reducer';
 
 export const GenderType = () => {

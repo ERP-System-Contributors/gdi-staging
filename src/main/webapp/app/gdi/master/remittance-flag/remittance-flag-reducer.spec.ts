@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './remittance-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IRemittanceFlag, defaultValue } from 'app/shared/model/remittance-flag.model';
+import { IRemittanceFlag, defaultValue } from 'app/shared/model/gdi/remittance-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IProfessionalQualification } from 'app/shared/model/professional-qualification.model';
+import { IProfessionalQualification } from 'app/shared/model/gdi/professional-qualification.model';
 import { getEntity, updateEntity, createEntity, reset } from './professional-qualification.reducer';
 
 export const ProfessionalQualificationUpdate = () => {

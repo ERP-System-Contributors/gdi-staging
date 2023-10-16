@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './gdi-transaction-data-index.reducer';
 import { EntityState } from '../../../shared/reducers/reducer.utils';
-import { IGdiTransactionDataIndex, defaultValue } from '../../../shared/model/gdi-transaction-data-index.model';
+import { IGdiTransactionDataIndex, defaultValue } from '../../../shared/model/gdi/gdi-transaction-data-index.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IExecutiveCategoryType, defaultValue } from 'app/shared/model/executive-category-type.model';
+import { IExecutiveCategoryType, defaultValue } from 'app/shared/model/gdi/executive-category-type.model';
 
 const initialState: EntityState<IExecutiveCategoryType> = {
   loading: false,

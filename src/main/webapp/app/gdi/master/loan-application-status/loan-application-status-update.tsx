@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILoanApplicationStatus } from 'app/shared/model/loan-application-status.model';
+import { ILoanApplicationStatus } from 'app/shared/model/gdi/loan-application-status.model';
 import { getEntity, updateEntity, createEntity, reset } from './loan-application-status.reducer';
 
 export const LoanApplicationStatusUpdate = () => {

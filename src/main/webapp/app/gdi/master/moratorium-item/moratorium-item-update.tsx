@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IMoratoriumItem } from 'app/shared/model/moratorium-item.model';
+import { IMoratoriumItem } from 'app/shared/model/gdi/moratorium-item.model';
 import { getEntity, updateEntity, createEntity, reset } from './moratorium-item.reducer';
 
 export const MoratoriumItemUpdate = () => {

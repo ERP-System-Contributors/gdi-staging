@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './issuers-of-securities.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IIssuersOfSecurities, defaultValue } from 'app/shared/model/issuers-of-securities.model';
+import { IIssuersOfSecurities, defaultValue } from 'app/shared/model/gdi/issuers-of-securities.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IUltimateBeneficiaryCategory } from 'app/shared/model/ultimate-beneficiary-category.model';
+import { IUltimateBeneficiaryCategory } from 'app/shared/model/gdi/ultimate-beneficiary-category.model';
 import { getEntity, updateEntity, createEntity, reset } from './ultimate-beneficiary-category.reducer';
 
 export const UltimateBeneficiaryCategoryUpdate = () => {

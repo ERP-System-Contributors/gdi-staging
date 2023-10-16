@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './staff-role-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IStaffRoleType, defaultValue } from 'app/shared/model/staff-role-type.model';
+import { IStaffRoleType, defaultValue } from 'app/shared/model/gdi/staff-role-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

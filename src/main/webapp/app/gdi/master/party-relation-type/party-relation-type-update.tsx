@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IPartyRelationType } from 'app/shared/model/party-relation-type.model';
+import { IPartyRelationType } from 'app/shared/model/gdi/party-relation-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './party-relation-type.reducer';
 
 export const PartyRelationTypeUpdate = () => {

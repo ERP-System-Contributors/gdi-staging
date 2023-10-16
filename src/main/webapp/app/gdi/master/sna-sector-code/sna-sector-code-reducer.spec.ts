@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './sna-sector-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ISnaSectorCode, defaultValue } from 'app/shared/model/sna-sector-code.model';
+import { ISnaSectorCode, defaultValue } from 'app/shared/model/gdi/sna-sector-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './interbank-sector-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IInterbankSectorCode, defaultValue } from 'app/shared/model/interbank-sector-code.model';
+import { IInterbankSectorCode, defaultValue } from 'app/shared/model/gdi/interbank-sector-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbProductServiceFeeType } from 'app/shared/model/crb-product-service-fee-type.model';
+import { ICrbProductServiceFeeType } from 'app/shared/model/gdi/crb-product-service-fee-type.model';
 import { searchEntities, getEntities } from './crb-product-service-fee-type.reducer';
 
 export const CrbProductServiceFeeType = () => {

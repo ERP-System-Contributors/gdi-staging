@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './committee-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICommitteeType, defaultValue } from 'app/shared/model/committee-type.model';
+import { ICommitteeType, defaultValue } from 'app/shared/model/gdi/committee-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

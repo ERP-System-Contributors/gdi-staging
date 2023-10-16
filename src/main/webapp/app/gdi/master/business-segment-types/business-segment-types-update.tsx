@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IBusinessSegmentTypes } from 'app/shared/model/business-segment-types.model';
+import { IBusinessSegmentTypes } from 'app/shared/model/gdi/business-segment-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './business-segment-types.reducer';
 
 export const BusinessSegmentTypesUpdate = () => {

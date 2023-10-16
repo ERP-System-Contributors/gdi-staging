@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './bounced-cheque-categories.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IBouncedChequeCategories, defaultValue } from 'app/shared/model/bounced-cheque-categories.model';
+import { IBouncedChequeCategories, defaultValue } from 'app/shared/model/gdi/bounced-cheque-categories.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

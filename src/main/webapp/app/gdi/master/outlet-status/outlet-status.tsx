@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IOutletStatus } from 'app/shared/model/outlet-status.model';
+import { IOutletStatus } from 'app/shared/model/gdi/outlet-status.model';
 import { searchEntities, getEntities } from './outlet-status.reducer';
 
 export const OutletStatus = () => {

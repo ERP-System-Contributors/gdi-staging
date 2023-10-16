@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbReportViewBand } from 'app/shared/model/crb-report-view-band.model';
+import { ICrbReportViewBand } from 'app/shared/model/gdi/crb-report-view-band.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-report-view-band.reducer';
 
 export const CrbReportViewBandUpdate = () => {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IMerchantType } from 'app/shared/model/merchant-type.model';
+import { IMerchantType } from 'app/shared/model/gdi/merchant-type.model';
 import { searchEntities, getEntities } from './merchant-type.reducer';
 
 export const MerchantType = () => {

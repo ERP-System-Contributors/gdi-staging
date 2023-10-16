@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './card-fraud-incident-category.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICardFraudIncidentCategory, defaultValue } from 'app/shared/model/card-fraud-incident-category.model';
+import { ICardFraudIncidentCategory, defaultValue } from 'app/shared/model/gdi/card-fraud-incident-category.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

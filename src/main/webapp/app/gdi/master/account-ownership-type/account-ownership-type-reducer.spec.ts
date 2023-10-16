@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 import reducer, { getEntities, searchEntities, getEntity, reset } from './account-ownership-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IAccountOwnershipType, defaultValue } from 'app/shared/model/account-ownership-type.model';
+import { IAccountOwnershipType, defaultValue } from 'app/shared/model/gdi/account-ownership-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

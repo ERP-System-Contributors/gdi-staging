@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbAgingBands } from 'app/shared/model/crb-aging-bands.model';
+import { ICrbAgingBands } from 'app/shared/model/gdi/crb-aging-bands.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-aging-bands.reducer';
 
 export const CrbAgingBandsUpdate = () => {

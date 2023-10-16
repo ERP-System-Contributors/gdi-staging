@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IGenderType, defaultValue } from 'app/shared/model/gender-type.model';
+import { IGenderType, defaultValue } from 'app/shared/model/gdi/gender-type.model';
 
 const initialState: EntityState<IGenderType> = {
   loading: false,

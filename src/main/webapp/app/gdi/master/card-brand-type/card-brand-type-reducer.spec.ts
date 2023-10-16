@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './card-brand-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICardBrandType, defaultValue } from 'app/shared/model/card-brand-type.model';
+import { ICardBrandType, defaultValue } from 'app/shared/model/gdi/card-brand-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAccountOwnershipType } from 'app/shared/model/account-ownership-type.model';
+import { IAccountOwnershipType } from 'app/shared/model/gdi/account-ownership-type.model';
 import { searchEntities, getEntities } from './account-ownership-type.reducer';
 
 export const AccountOwnershipType = () => {

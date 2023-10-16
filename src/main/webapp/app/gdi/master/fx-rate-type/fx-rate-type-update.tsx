@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxRateType } from 'app/shared/model/fx-rate-type.model';
+import { IFxRateType } from 'app/shared/model/gdi/fx-rate-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './fx-rate-type.reducer';
 
 export const FxRateTypeUpdate = () => {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IChartOfAccountsCode } from 'app/shared/model/chart-of-accounts-code.model';
+import { IChartOfAccountsCode } from 'app/shared/model/gdi/chart-of-accounts-code.model';
 import { searchEntities, getEntities } from './chart-of-accounts-code.reducer';
 
 export const ChartOfAccountsCode = () => {

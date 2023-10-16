@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IInterbankSectorCode } from 'app/shared/model/interbank-sector-code.model';
+import { IInterbankSectorCode } from 'app/shared/model/gdi/interbank-sector-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './interbank-sector-code.reducer';
 
 export const InterbankSectorCodeUpdate = () => {

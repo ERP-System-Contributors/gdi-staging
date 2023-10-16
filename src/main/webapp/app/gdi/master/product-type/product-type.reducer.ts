@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IProductType, defaultValue } from 'app/shared/model/product-type.model';
+import { IProductType, defaultValue } from 'app/shared/model/gdi/product-type.model';
 
 const initialState: EntityState<IProductType> = {
   loading: false,

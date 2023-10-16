@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './source-remittance-purpose-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ISourceRemittancePurposeType, defaultValue } from 'app/shared/model/source-remittance-purpose-type.model';
+import { ISourceRemittancePurposeType, defaultValue } from 'app/shared/model/gdi/source-remittance-purpose-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

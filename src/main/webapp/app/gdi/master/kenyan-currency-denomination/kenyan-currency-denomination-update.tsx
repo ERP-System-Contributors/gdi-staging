@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IKenyanCurrencyDenomination } from 'app/shared/model/kenyan-currency-denomination.model';
+import { IKenyanCurrencyDenomination } from 'app/shared/model/gdi/kenyan-currency-denomination.model';
 import { getEntity, updateEntity, createEntity, reset } from './kenyan-currency-denomination.reducer';
 
 export const KenyanCurrencyDenominationUpdate = () => {

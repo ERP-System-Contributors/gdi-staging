@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICardPerformanceFlag } from 'app/shared/model/card-performance-flag.model';
+import { ICardPerformanceFlag } from 'app/shared/model/gdi/card-performance-flag.model';
 import { searchEntities, getEntities } from './card-performance-flag.reducer';
 
 export const CardPerformanceFlag = () => {

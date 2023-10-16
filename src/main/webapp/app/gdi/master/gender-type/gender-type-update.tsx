@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGenderType } from 'app/shared/model/gender-type.model';
+import { IGenderType } from 'app/shared/model/gdi/gender-type.model';
 import { genderTypes } from 'app/shared/model/enumerations/gender-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './gender-type.reducer';
 

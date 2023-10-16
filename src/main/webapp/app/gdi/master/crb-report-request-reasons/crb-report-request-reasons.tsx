@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbReportRequestReasons } from 'app/shared/model/crb-report-request-reasons.model';
+import { ICrbReportRequestReasons } from 'app/shared/model/gdi/crb-report-request-reasons.model';
 import { searchEntities, getEntities } from './crb-report-request-reasons.reducer';
 
 export const CrbReportRequestReasons = () => {

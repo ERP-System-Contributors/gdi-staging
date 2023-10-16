@@ -16,7 +16,7 @@ import reducer, {
   reset,
 } from './iso-country-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IIsoCountryCode, defaultValue } from 'app/shared/model/iso-country-code.model';
+import { IIsoCountryCode, defaultValue } from 'app/shared/model/gdi/iso-country-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

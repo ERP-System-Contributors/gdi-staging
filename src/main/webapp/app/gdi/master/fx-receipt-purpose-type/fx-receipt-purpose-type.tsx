@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxReceiptPurposeType } from 'app/shared/model/fx-receipt-purpose-type.model';
+import { IFxReceiptPurposeType } from 'app/shared/model/gdi/fx-receipt-purpose-type.model';
 import { searchEntities, getEntities } from './fx-receipt-purpose-type.reducer';
 
 export const FxReceiptPurposeType = () => {

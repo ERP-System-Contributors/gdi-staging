@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICounterPartyDealType, defaultValue } from 'app/shared/model/counter-party-deal-type.model';
+import { ICounterPartyDealType, defaultValue } from 'app/shared/model/gdi/counter-party-deal-type.model';
 
 const initialState: EntityState<ICounterPartyDealType> = {
   loading: false,

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IContractStatus } from 'app/shared/model/contract-status.model';
+import { IContractStatus } from 'app/shared/model/gdi/contract-status.model';
 import { searchEntities, getEntities } from './contract-status.reducer';
 
 export const ContractStatus = () => {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IStaffRoleType } from 'app/shared/model/staff-role-type.model';
+import { IStaffRoleType } from 'app/shared/model/gdi/staff-role-type.model';
 import { searchEntities, getEntities } from './staff-role-type.reducer';
 
 export const StaffRoleType = () => {

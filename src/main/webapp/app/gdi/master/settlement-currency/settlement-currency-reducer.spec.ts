@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './settlement-currency.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ISettlementCurrency, defaultValue } from 'app/shared/model/settlement-currency.model';
+import { ISettlementCurrency, defaultValue } from 'app/shared/model/gdi/settlement-currency.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

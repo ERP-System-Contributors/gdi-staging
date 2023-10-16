@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISourceRemittancePurposeType } from 'app/shared/model/source-remittance-purpose-type.model';
+import { ISourceRemittancePurposeType } from 'app/shared/model/gdi/source-remittance-purpose-type.model';
 import { searchEntities, getEntities } from './source-remittance-purpose-type.reducer';
 
 export const SourceRemittancePurposeType = () => {

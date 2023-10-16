@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILoanRestructureFlag } from 'app/shared/model/loan-restructure-flag.model';
+import { ILoanRestructureFlag } from 'app/shared/model/gdi/loan-restructure-flag.model';
 import { searchEntities, getEntities } from './loan-restructure-flag.reducer';
 
 export const LoanRestructureFlag = () => {

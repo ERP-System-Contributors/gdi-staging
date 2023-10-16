@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFinancialDerivativeTypeCode } from 'app/shared/model/financial-derivative-type-code.model';
+import { IFinancialDerivativeTypeCode } from 'app/shared/model/gdi/financial-derivative-type-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './financial-derivative-type-code.reducer';
 
 export const FinancialDerivativeTypeCodeUpdate = () => {

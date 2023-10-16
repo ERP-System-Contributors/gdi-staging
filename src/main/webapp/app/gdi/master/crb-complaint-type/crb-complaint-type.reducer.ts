@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICrbComplaintType, defaultValue } from 'app/shared/model/crb-complaint-type.model';
+import { ICrbComplaintType, defaultValue } from 'app/shared/model/gdi/crb-complaint-type.model';
 
 const initialState: EntityState<ICrbComplaintType> = {
   loading: false,

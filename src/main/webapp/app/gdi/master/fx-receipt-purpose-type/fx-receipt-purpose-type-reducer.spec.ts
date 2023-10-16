@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './fx-receipt-purpose-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFxReceiptPurposeType, defaultValue } from 'app/shared/model/fx-receipt-purpose-type.model';
+import { IFxReceiptPurposeType, defaultValue } from 'app/shared/model/gdi/fx-receipt-purpose-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './mfb-branch-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IMfbBranchCode, defaultValue } from 'app/shared/model/mfb-branch-code.model';
+import { IMfbBranchCode, defaultValue } from 'app/shared/model/gdi/mfb-branch-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

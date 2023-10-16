@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IChannelType } from 'app/shared/model/channel-type.model';
+import { IChannelType } from 'app/shared/model/gdi/channel-type.model';
 import { searchEntities, getEntities } from './channel-type.reducer';
 
 export const ChannelType = () => {

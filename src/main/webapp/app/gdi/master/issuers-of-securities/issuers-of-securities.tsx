@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IIssuersOfSecurities } from 'app/shared/model/issuers-of-securities.model';
+import { IIssuersOfSecurities } from 'app/shared/model/gdi/issuers-of-securities.model';
 import { searchEntities, getEntities } from './issuers-of-securities.reducer';
 
 export const IssuersOfSecurities = () => {

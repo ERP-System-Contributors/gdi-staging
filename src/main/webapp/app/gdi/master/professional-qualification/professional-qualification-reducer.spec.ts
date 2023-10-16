@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './professional-qualification.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IProfessionalQualification, defaultValue } from 'app/shared/model/professional-qualification.model';
+import { IProfessionalQualification, defaultValue } from 'app/shared/model/gdi/professional-qualification.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './institution-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IInstitutionCode, defaultValue } from 'app/shared/model/institution-code.model';
+import { IInstitutionCode, defaultValue } from 'app/shared/model/gdi/institution-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

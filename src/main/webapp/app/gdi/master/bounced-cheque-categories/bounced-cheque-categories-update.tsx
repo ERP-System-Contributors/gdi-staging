@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IBouncedChequeCategories } from 'app/shared/model/bounced-cheque-categories.model';
+import { IBouncedChequeCategories } from 'app/shared/model/gdi/bounced-cheque-categories.model';
 import { getEntity, updateEntity, createEntity, reset } from './bounced-cheque-categories.reducer';
 
 export const BouncedChequeCategoriesUpdate = () => {

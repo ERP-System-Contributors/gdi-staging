@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICustomerType } from 'app/shared/model/customer-type.model';
+import { ICustomerType } from 'app/shared/model/gdi/customer-type.model';
 import { searchEntities, getEntities } from './customer-type.reducer';
 
 export const CustomerType = () => {

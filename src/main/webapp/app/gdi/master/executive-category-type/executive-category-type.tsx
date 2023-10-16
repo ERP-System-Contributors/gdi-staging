@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IExecutiveCategoryType } from 'app/shared/model/executive-category-type.model';
+import { IExecutiveCategoryType } from 'app/shared/model/gdi/executive-category-type.model';
 import { searchEntities, getEntities } from './executive-category-type.reducer';
 
 export const ExecutiveCategoryType = () => {

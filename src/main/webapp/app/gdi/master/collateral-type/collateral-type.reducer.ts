@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICollateralType, defaultValue } from 'app/shared/model/collateral-type.model';
+import { ICollateralType, defaultValue } from 'app/shared/model/gdi/collateral-type.model';
 
 const initialState: EntityState<ICollateralType> = {
   loading: false,

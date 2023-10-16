@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './card-performance-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICardPerformanceFlag, defaultValue } from 'app/shared/model/card-performance-flag.model';
+import { ICardPerformanceFlag, defaultValue } from 'app/shared/model/gdi/card-performance-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

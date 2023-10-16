@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-file-transmission-status.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbFileTransmissionStatus, defaultValue } from 'app/shared/model/crb-file-transmission-status.model';
+import { ICrbFileTransmissionStatus, defaultValue } from 'app/shared/model/gdi/crb-file-transmission-status.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

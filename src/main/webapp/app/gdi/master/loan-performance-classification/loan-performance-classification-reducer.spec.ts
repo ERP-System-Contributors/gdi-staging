@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './loan-performance-classification.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ILoanPerformanceClassification, defaultValue } from 'app/shared/model/loan-performance-classification.model';
+import { ILoanPerformanceClassification, defaultValue } from 'app/shared/model/gdi/loan-performance-classification.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

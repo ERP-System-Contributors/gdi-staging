@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './party-relation-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IPartyRelationType, defaultValue } from 'app/shared/model/party-relation-type.model';
+import { IPartyRelationType, defaultValue } from 'app/shared/model/gdi/party-relation-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

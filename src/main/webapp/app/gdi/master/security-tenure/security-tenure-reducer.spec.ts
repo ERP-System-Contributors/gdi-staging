@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './security-tenure.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ISecurityTenure, defaultValue } from 'app/shared/model/security-tenure.model';
+import { ISecurityTenure, defaultValue } from 'app/shared/model/gdi/security-tenure.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

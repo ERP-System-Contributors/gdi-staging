@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-report-view-band.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbReportViewBand, defaultValue } from 'app/shared/model/crb-report-view-band.model';
+import { ICrbReportViewBand, defaultValue } from 'app/shared/model/gdi/crb-report-view-band.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

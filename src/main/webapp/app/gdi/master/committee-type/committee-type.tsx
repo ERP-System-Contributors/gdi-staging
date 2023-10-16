@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICommitteeType } from 'app/shared/model/committee-type.model';
+import { ICommitteeType } from 'app/shared/model/gdi/committee-type.model';
 import { searchEntities, getEntities } from './committee-type.reducer';
 
 export const CommitteeType = () => {

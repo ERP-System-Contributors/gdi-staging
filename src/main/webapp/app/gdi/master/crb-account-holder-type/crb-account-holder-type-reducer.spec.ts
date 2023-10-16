@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-account-holder-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbAccountHolderType, defaultValue } from 'app/shared/model/crb-account-holder-type.model';
+import { ICrbAccountHolderType, defaultValue } from 'app/shared/model/gdi/crb-account-holder-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

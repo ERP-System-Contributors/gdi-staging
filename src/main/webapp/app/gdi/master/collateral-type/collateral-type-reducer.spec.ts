@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './collateral-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICollateralType, defaultValue } from 'app/shared/model/collateral-type.model';
+import { ICollateralType, defaultValue } from 'app/shared/model/gdi/collateral-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

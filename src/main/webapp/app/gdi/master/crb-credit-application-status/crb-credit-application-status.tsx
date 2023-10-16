@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbCreditApplicationStatus } from 'app/shared/model/crb-credit-application-status.model';
+import { ICrbCreditApplicationStatus } from 'app/shared/model/gdi/crb-credit-application-status.model';
 import { searchEntities, getEntities } from './crb-credit-application-status.reducer';
 
 export const CrbCreditApplicationStatus = () => {

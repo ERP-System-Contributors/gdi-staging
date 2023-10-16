@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './agricultural-enterprise-activity-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IAgriculturalEnterpriseActivityType, defaultValue } from 'app/shared/model/agricultural-enterprise-activity-type.model';
+import { IAgriculturalEnterpriseActivityType, defaultValue } from 'app/shared/model/gdi/agricultural-enterprise-activity-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

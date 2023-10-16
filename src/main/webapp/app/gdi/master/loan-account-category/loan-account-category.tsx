@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ILoanAccountCategory } from 'app/shared/model/loan-account-category.model';
+import { ILoanAccountCategory } from 'app/shared/model/gdi/loan-account-category.model';
 import { searchEntities, getEntities } from './loan-account-category.reducer';
 
 export const LoanAccountCategory = () => {

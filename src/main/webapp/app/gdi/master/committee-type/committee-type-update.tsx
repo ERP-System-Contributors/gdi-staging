@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICommitteeType } from 'app/shared/model/committee-type.model';
+import { ICommitteeType } from 'app/shared/model/gdi/committee-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './committee-type.reducer';
 
 export const CommitteeTypeUpdate = () => {

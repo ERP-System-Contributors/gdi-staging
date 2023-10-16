@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICardStatusFlag, defaultValue } from 'app/shared/model/card-status-flag.model';
+import { ICardStatusFlag, defaultValue } from 'app/shared/model/gdi/card-status-flag.model';
 
 const initialState: EntityState<ICardStatusFlag> = {
   loading: false,

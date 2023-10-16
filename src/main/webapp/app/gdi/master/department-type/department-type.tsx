@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IDepartmentType } from 'app/shared/model/department-type.model';
+import { IDepartmentType } from 'app/shared/model/gdi/department-type.model';
 import { searchEntities, getEntities } from './department-type.reducer';
 
 export const DepartmentType = () => {

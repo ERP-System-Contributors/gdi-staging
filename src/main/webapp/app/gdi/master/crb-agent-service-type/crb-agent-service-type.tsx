@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbAgentServiceType } from 'app/shared/model/crb-agent-service-type.model';
+import { ICrbAgentServiceType } from 'app/shared/model/gdi/crb-agent-service-type.model';
 import { searchEntities, getEntities } from './crb-agent-service-type.reducer';
 
 export const CrbAgentServiceType = () => {

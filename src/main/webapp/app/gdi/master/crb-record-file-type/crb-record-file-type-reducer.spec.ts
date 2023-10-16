@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-record-file-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbRecordFileType, defaultValue } from 'app/shared/model/crb-record-file-type.model';
+import { ICrbRecordFileType, defaultValue } from 'app/shared/model/gdi/crb-record-file-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

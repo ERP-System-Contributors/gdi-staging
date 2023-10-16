@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICurrencyAuthenticityFlag } from 'app/shared/model/currency-authenticity-flag.model';
+import { ICurrencyAuthenticityFlag } from 'app/shared/model/gdi/currency-authenticity-flag.model';
 import { CurrencyAuthenticityFlags } from 'app/shared/model/enumerations/currency-authenticity-flags.model';
 import { CurrencyAuthenticityTypes } from 'app/shared/model/enumerations/currency-authenticity-types.model';
 import { getEntity, updateEntity, createEntity, reset } from './currency-authenticity-flag.reducer';

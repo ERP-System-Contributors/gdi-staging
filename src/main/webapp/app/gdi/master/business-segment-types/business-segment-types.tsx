@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IBusinessSegmentTypes } from 'app/shared/model/business-segment-types.model';
+import { IBusinessSegmentTypes } from 'app/shared/model/gdi/business-segment-types.model';
 import { searchEntities, getEntities } from './business-segment-types.reducer';
 
 export const BusinessSegmentTypes = () => {

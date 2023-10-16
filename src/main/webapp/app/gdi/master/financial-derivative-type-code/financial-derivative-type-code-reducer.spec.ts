@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './financial-derivative-type-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IFinancialDerivativeTypeCode, defaultValue } from 'app/shared/model/financial-derivative-type-code.model';
+import { IFinancialDerivativeTypeCode, defaultValue } from 'app/shared/model/gdi/financial-derivative-type-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

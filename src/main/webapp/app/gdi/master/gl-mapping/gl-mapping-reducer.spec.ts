@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './gl-mapping.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IGlMapping, defaultValue } from 'app/shared/model/gl-mapping.model';
+import { IGlMapping, defaultValue } from 'app/shared/model/gdi/gl-mapping.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

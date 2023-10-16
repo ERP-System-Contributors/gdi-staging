@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-data-submitting-institutions.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbDataSubmittingInstitutions, defaultValue } from 'app/shared/model/crb-data-submitting-institutions.model';
+import { ICrbDataSubmittingInstitutions, defaultValue } from 'app/shared/model/gdi/crb-data-submitting-institutions.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

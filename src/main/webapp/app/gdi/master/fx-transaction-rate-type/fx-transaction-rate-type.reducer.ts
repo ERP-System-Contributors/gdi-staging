@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IFxTransactionRateType, defaultValue } from 'app/shared/model/fx-transaction-rate-type.model';
+import { IFxTransactionRateType, defaultValue } from 'app/shared/model/gdi/fx-transaction-rate-type.model';
 
 const initialState: EntityState<IFxTransactionRateType> = {
   loading: false,

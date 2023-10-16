@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFinancialDerivativeTypeCode } from 'app/shared/model/financial-derivative-type-code.model';
+import { IFinancialDerivativeTypeCode } from 'app/shared/model/gdi/financial-derivative-type-code.model';
 import { searchEntities, getEntities } from './financial-derivative-type-code.reducer';
 
 export const FinancialDerivativeTypeCode = () => {

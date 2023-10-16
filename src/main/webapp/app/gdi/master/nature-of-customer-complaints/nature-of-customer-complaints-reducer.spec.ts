@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './nature-of-customer-complaints.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { INatureOfCustomerComplaints, defaultValue } from 'app/shared/model/nature-of-customer-complaints.model';
+import { INatureOfCustomerComplaints, defaultValue } from 'app/shared/model/gdi/nature-of-customer-complaints.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

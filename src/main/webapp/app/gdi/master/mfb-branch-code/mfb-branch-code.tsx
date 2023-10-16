@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IMfbBranchCode } from 'app/shared/model/mfb-branch-code.model';
+import { IMfbBranchCode } from 'app/shared/model/gdi/mfb-branch-code.model';
 import { searchEntities, getEntities } from './mfb-branch-code.reducer';
 
 export const MfbBranchCode = () => {

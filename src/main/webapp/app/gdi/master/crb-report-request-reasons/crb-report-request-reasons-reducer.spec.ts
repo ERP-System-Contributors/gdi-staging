@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-report-request-reasons.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbReportRequestReasons, defaultValue } from 'app/shared/model/crb-report-request-reasons.model';
+import { ICrbReportRequestReasons, defaultValue } from 'app/shared/model/gdi/crb-report-request-reasons.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

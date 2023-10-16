@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './moratorium-item.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IMoratoriumItem, defaultValue } from 'app/shared/model/moratorium-item.model';
+import { IMoratoriumItem, defaultValue } from 'app/shared/model/gdi/moratorium-item.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

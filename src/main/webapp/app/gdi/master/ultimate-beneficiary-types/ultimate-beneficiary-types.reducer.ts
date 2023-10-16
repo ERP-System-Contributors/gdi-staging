@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IUltimateBeneficiaryTypes, defaultValue } from 'app/shared/model/ultimate-beneficiary-types.model';
+import { IUltimateBeneficiaryTypes, defaultValue } from 'app/shared/model/gdi/ultimate-beneficiary-types.model';
 
 const initialState: EntityState<IUltimateBeneficiaryTypes> = {
   loading: false,

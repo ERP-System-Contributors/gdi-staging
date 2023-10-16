@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IReasonsForBouncedCheque } from 'app/shared/model/reasons-for-bounced-cheque.model';
+import { IReasonsForBouncedCheque } from 'app/shared/model/gdi/reasons-for-bounced-cheque.model';
 import { searchEntities, getEntities } from './reasons-for-bounced-cheque.reducer';
 
 export const ReasonsForBouncedCheque = () => {

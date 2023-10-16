@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './credit-card-ownership.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICreditCardOwnership, defaultValue } from 'app/shared/model/credit-card-ownership.model';
+import { ICreditCardOwnership, defaultValue } from 'app/shared/model/gdi/credit-card-ownership.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

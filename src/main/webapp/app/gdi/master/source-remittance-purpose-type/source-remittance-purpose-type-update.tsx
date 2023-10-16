@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISourceRemittancePurposeType } from 'app/shared/model/source-remittance-purpose-type.model';
+import { ISourceRemittancePurposeType } from 'app/shared/model/gdi/source-remittance-purpose-type.model';
 import { SourceOrPurposeOfRemittancFlag } from 'app/shared/model/enumerations/source-or-purpose-of-remittanc-flag.model';
 import { getEntity, updateEntity, createEntity, reset } from './source-remittance-purpose-type.reducer';
 

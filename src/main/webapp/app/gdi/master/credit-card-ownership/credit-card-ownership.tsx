@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICreditCardOwnership } from 'app/shared/model/credit-card-ownership.model';
+import { ICreditCardOwnership } from 'app/shared/model/gdi/credit-card-ownership.model';
 import { searchEntities, getEntities } from './credit-card-ownership.reducer';
 
 export const CreditCardOwnership = () => {

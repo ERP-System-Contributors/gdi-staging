@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IFxTransactionChannelType } from 'app/shared/model/fx-transaction-channel-type.model';
+import { IFxTransactionChannelType } from 'app/shared/model/gdi/fx-transaction-channel-type.model';
 import { searchEntities, getEntities } from './fx-transaction-channel-type.reducer';
 
 export const FxTransactionChannelType = () => {

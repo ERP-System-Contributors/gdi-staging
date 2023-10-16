@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ISecurityClassificationType } from 'app/shared/model/security-classification-type.model';
+import { ISecurityClassificationType } from 'app/shared/model/gdi/security-classification-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './security-classification-type.reducer';
 
 export const SecurityClassificationTypeUpdate = () => {

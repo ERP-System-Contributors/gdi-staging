@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './derivative-underlying-asset.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IDerivativeUnderlyingAsset, defaultValue } from 'app/shared/model/derivative-underlying-asset.model';
+import { IDerivativeUnderlyingAsset, defaultValue } from 'app/shared/model/gdi/derivative-underlying-asset.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbComplaintStatusType } from 'app/shared/model/crb-complaint-status-type.model';
+import { ICrbComplaintStatusType } from 'app/shared/model/gdi/crb-complaint-status-type.model';
 import { searchEntities, getEntities } from './crb-complaint-status-type.reducer';
 
 export const CrbComplaintStatusType = () => {

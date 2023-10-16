@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICollateralType } from 'app/shared/model/collateral-type.model';
+import { ICollateralType } from 'app/shared/model/gdi/collateral-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './collateral-type.reducer';
 
 export const CollateralTypeUpdate = () => {

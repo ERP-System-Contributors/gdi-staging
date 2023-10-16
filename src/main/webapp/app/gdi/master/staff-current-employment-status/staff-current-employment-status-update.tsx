@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IStaffCurrentEmploymentStatus } from 'app/shared/model/staff-current-employment-status.model';
+import { IStaffCurrentEmploymentStatus } from 'app/shared/model/gdi/staff-current-employment-status.model';
 import { getEntity, updateEntity, createEntity, reset } from './staff-current-employment-status.reducer';
 
 export const StaffCurrentEmploymentStatusUpdate = () => {

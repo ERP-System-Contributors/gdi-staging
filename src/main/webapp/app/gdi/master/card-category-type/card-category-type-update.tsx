@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICardCategoryType } from 'app/shared/model/card-category-type.model';
+import { ICardCategoryType } from 'app/shared/model/gdi/card-category-type.model';
 import { CardCategoryFlag } from 'app/shared/model/enumerations/card-category-flag.model';
 import { getEntity, updateEntity, createEntity, reset } from './card-category-type.reducer';
 

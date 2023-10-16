@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './crb-amount-category-band.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICrbAmountCategoryBand, defaultValue } from 'app/shared/model/crb-amount-category-band.model';
+import { ICrbAmountCategoryBand, defaultValue } from 'app/shared/model/gdi/crb-amount-category-band.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

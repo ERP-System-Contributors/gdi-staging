@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './department-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IDepartmentType, defaultValue } from 'app/shared/model/department-type.model';
+import { IDepartmentType, defaultValue } from 'app/shared/model/gdi/department-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

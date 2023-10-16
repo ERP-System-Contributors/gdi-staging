@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ILoanProductType, defaultValue } from 'app/shared/model/loan-product-type.model';
+import { ILoanProductType, defaultValue } from 'app/shared/model/gdi/loan-product-type.model';
 
 const initialState: EntityState<ILoanProductType> = {
   loading: false,

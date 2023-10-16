@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './channel-type.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IChannelType, defaultValue } from 'app/shared/model/channel-type.model';
+import { IChannelType, defaultValue } from 'app/shared/model/gdi/channel-type.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

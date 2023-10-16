@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbSubscriptionStatusTypeCode } from 'app/shared/model/crb-subscription-status-type-code.model';
+import { ICrbSubscriptionStatusTypeCode } from 'app/shared/model/gdi/crb-subscription-status-type-code.model';
 import { searchEntities, getEntities } from './crb-subscription-status-type-code.reducer';
 
 export const CrbSubscriptionStatusTypeCode = () => {

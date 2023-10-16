@@ -16,7 +16,7 @@ import reducer, {
   reset,
 } from './county-code.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICountyCode, defaultValue } from 'app/shared/model/county-code.model';
+import { ICountyCode, defaultValue } from 'app/shared/model/gdi/county-code.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

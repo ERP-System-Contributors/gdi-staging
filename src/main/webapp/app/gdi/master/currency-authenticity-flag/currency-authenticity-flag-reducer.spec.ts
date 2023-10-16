@@ -15,7 +15,7 @@ import reducer, {
   reset,
 } from './currency-authenticity-flag.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { ICurrencyAuthenticityFlag, defaultValue } from 'app/shared/model/currency-authenticity-flag.model';
+import { ICurrencyAuthenticityFlag, defaultValue } from 'app/shared/model/gdi/currency-authenticity-flag.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {

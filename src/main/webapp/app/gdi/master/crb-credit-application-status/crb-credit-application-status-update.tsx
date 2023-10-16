@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { ICrbCreditApplicationStatus } from 'app/shared/model/crb-credit-application-status.model';
+import { ICrbCreditApplicationStatus } from 'app/shared/model/gdi/crb-credit-application-status.model';
 import { getEntity, updateEntity, createEntity, reset } from './crb-credit-application-status.reducer';
 
 export const CrbCreditApplicationStatusUpdate = () => {

@@ -8,7 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IBankTransactionType } from 'app/shared/model/bank-transaction-type.model';
+import { IBankTransactionType } from 'app/shared/model/gdi/bank-transaction-type.model';
 import { getEntity, updateEntity, createEntity, reset } from './bank-transaction-type.reducer';
 
 export const BankTransactionTypeUpdate = () => {

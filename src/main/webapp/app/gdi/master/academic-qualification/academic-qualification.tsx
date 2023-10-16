@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IAcademicQualification } from 'app/shared/model/academic-qualification.model';
+import { IAcademicQualification } from 'app/shared/model/gdi/academic-qualification.model';
 import { searchEntities, getEntities } from './academic-qualification.reducer';
 
 export const AcademicQualification = () => {

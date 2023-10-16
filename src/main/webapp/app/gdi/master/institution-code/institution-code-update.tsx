@@ -10,7 +10,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IPlaceholder } from 'app/shared/model/service/placeholder.model';
 import { getEntities as getPlaceholders } from 'app/gdi/service/placeholder/placeholder.reducer';
-import { IInstitutionCode } from 'app/shared/model/institution-code.model';
+import { IInstitutionCode } from 'app/shared/model/gdi/institution-code.model';
 import { getEntity, updateEntity, createEntity, reset } from './institution-code.reducer';
 
 export const InstitutionCodeUpdate = () => {

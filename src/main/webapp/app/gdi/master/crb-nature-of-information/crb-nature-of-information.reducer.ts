@@ -3,7 +3,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { ICrbNatureOfInformation, defaultValue } from 'app/shared/model/crb-nature-of-information.model';
+import { ICrbNatureOfInformation, defaultValue } from 'app/shared/model/gdi/crb-nature-of-information.model';
 
 const initialState: EntityState<ICrbNatureOfInformation> = {
   loading: false,
