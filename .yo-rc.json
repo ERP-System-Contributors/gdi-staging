@@ -233,7 +233,8 @@
       "CardUsageInformation",
       "CollateralInformation",
       "CreditCardFacility",
-      "CardState"
+      "CardState",
+      "BusinessTeam"
     ],
     "entitySuffix": "",
     "jhiPrefix": "jhi",

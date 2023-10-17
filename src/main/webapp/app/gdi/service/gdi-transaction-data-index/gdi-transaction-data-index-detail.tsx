@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
-import { openFile, byteSize } from 'react-jhipster';
+import { byteSize } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
@@ -45,9 +45,9 @@ export const GdiTransactionDataIndexDetail = () => {
           </dt>
           <dd>{gdiTransactionDataIndexEntity.datasetBehavior}</dd>
           <dt>
-            <span id="minimumDatarowsPerRequest">Minimum Datarows Per Request</span>
+            <span id="minimumDataRowsPerRequest">Minimum Data Rows Per Request</span>
           </dt>
-          <dd>{gdiTransactionDataIndexEntity.minimumDatarowsPerRequest}</dd>
+          <dd>{gdiTransactionDataIndexEntity.minimumDataRowsPerRequest}</dd>
           <dt>
             <span id="maximumDataRowsPerRequest">Maximum Data Rows Per Request</span>
           </dt>
@@ -57,22 +57,9 @@ export const GdiTransactionDataIndexDetail = () => {
           </dt>
           <dd>{gdiTransactionDataIndexEntity.datasetDescription}</dd>
           <dt>
-            <span id="dataTemplate">Data Template</span>
+            <span id="dataPath">Data Path</span>
           </dt>
-          <dd>
-            {gdiTransactionDataIndexEntity.dataTemplate ? (
-              <div>
-                {gdiTransactionDataIndexEntity.dataTemplateContentType ? (
-                  <a onClick={openFile(gdiTransactionDataIndexEntity.dataTemplateContentType, gdiTransactionDataIndexEntity.dataTemplate)}>
-                    Open&nbsp;
-                  </a>
-                ) : null}
-                <span>
-                  {gdiTransactionDataIndexEntity.dataTemplateContentType}, {byteSize(gdiTransactionDataIndexEntity.dataTemplate)}
-                </span>
-              </div>
-            ) : null}
-          </dd>
+          <dd>{gdiTransactionDataIndexEntity.dataPath}</dd>
           <dt>Master Data Item</dt>
           <dd>
             {gdiTransactionDataIndexEntity.masterDataItems
@@ -82,6 +69,21 @@ export const GdiTransactionDataIndexDetail = () => {
                     {gdiTransactionDataIndexEntity.masterDataItems && i === gdiTransactionDataIndexEntity.masterDataItems.length - 1
                       ? ''
                       : ', '}
+                  </span>
+                ))
+              : null}
+          </dd>
+          <dt>Business Team</dt>
+          <dd>{gdiTransactionDataIndexEntity.businessTeam ? gdiTransactionDataIndexEntity.businessTeam.businessTeam : ''}</dd>
+          <dt>Data Set Template</dt>
+          <dd>{gdiTransactionDataIndexEntity.dataSetTemplate ? gdiTransactionDataIndexEntity.dataSetTemplate.documentTitle : ''}</dd>
+          <dt>Placeholder</dt>
+          <dd>
+            {gdiTransactionDataIndexEntity.placeholders
+              ? gdiTransactionDataIndexEntity.placeholders.map((val, i) => (
+                  <span key={val.id}>
+                    <a>{val.description}</a>
+                    {gdiTransactionDataIndexEntity.placeholders && i === gdiTransactionDataIndexEntity.placeholders.length - 1 ? '' : ', '}
                   </span>
                 ))
               : null}

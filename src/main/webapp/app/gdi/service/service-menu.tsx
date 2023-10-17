@@ -18,6 +18,12 @@ const MasterDataMenuItems = () => {
       <MenuItem icon="search" to="/universally-unique-mapping">
         Mapping
       </MenuItem>
+      <MenuItem icon="search" to="/business-team">
+        Business Teams
+      </MenuItem>
+      <MenuItem icon="search" to="/business-document">
+        Documents
+      </MenuItem>
       {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
     </>
   );

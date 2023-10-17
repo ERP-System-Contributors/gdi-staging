@@ -22,12 +22,16 @@ import placeholder from './placeholder/placeholder.reducer';
 import gdiMasterDataIndex from './gdi-master-data-index/gdi-master-data-index.reducer';
 import gdiTransactionDataIndex from './gdi-transaction-data-index/gdi-transaction-data-index.reducer';
 import universallyUniqueMapping from './universally-unique-mapping/universally-unique-mapping.reducer';
+import businessTeam from './business-team/business-team.reducer';
+import businessDocument from './business-document/business-document.reducer';
 
 const serviceReducers = {
   placeholder,
   gdiMasterDataIndex,
   gdiTransactionDataIndex,
   universallyUniqueMapping,
+  businessTeam,
+  businessDocument,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
 };
 

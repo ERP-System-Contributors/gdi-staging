@@ -1,0 +1,28 @@
+{
+  "changelogDate": "20231017081151",
+  "clientRootFolder": "people",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "businessTeam",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    }
+  ],
+  "incrementalChangelog": false,
+  "jpaMetamodelFiltering": true,
+  "name": "BusinessTeam",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "businessTeam",
+      "ownerSide": true,
+      "relationshipName": "teamMembers",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

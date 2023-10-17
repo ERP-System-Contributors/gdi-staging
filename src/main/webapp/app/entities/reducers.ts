@@ -234,6 +234,7 @@ import cardUsageInformation from 'app/entities/gdi-data/card-usage-information/c
 import collateralInformation from 'app/entities/gdi-data/collateral-information/collateral-information.reducer';
 import creditCardFacility from 'app/entities/gdi-data/credit-card-facility/credit-card-facility.reducer';
 import cardState from 'app/entities/gdi-data/card-state/card-state.reducer';
+import businessTeam from 'app/entities/people/business-team/business-team.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 const entitiesReducers = {
@@ -451,6 +452,7 @@ const entitiesReducers = {
   collateralInformation,
   creditCardFacility,
   cardState,
+  businessTeam,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
 };
 

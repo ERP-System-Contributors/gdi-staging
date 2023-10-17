@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Input, InputGroup, FormGroup, Form, Row, Col, Table } from 'reactstrap';
-import { openFile, byteSize, translate, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
+import { byteSize, translate, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
@@ -9,7 +9,7 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiTransactionDataIndex } from 'app/shared/model/gdi-data/gdi-transaction-data-index.model';
+import { IGdiTransactionDataIndex } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
 import { searchEntities, getEntities } from './gdi-transaction-data-index.reducer';
 
 export const GdiTransactionDataIndex = () => {
@@ -178,8 +178,8 @@ export const GdiTransactionDataIndex = () => {
                 <th className="hand" onClick={sort('datasetBehavior')}>
                   Dataset Behavior <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('minimumDatarowsPerRequest')}>
-                  Minimum Datarows Per Request <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('minimumDataRowsPerRequest')}>
+                  Minimum Data Rows Per Request <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('maximumDataRowsPerRequest')}>
                   Maximum Data Rows Per Request <FontAwesomeIcon icon="sort" />
@@ -187,8 +187,14 @@ export const GdiTransactionDataIndex = () => {
                 <th className="hand" onClick={sort('datasetDescription')}>
                   Dataset Description <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('dataTemplate')}>
-                  Data Template <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('dataPath')}>
+                  Data Path <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  Business Team <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  Data Set Template <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -205,22 +211,27 @@ export const GdiTransactionDataIndex = () => {
                   <td>{gdiTransactionDataIndex.databaseName}</td>
                   <td>{gdiTransactionDataIndex.updateFrequency}</td>
                   <td>{gdiTransactionDataIndex.datasetBehavior}</td>
-                  <td>{gdiTransactionDataIndex.minimumDatarowsPerRequest}</td>
+                  <td>{gdiTransactionDataIndex.minimumDataRowsPerRequest}</td>
                   <td>{gdiTransactionDataIndex.maximumDataRowsPerRequest}</td>
                   <td>{gdiTransactionDataIndex.datasetDescription}</td>
+                  <td>{gdiTransactionDataIndex.dataPath}</td>
                   <td>
-                    {gdiTransactionDataIndex.dataTemplate ? (
-                      <div>
-                        {gdiTransactionDataIndex.dataTemplateContentType ? (
-                          <a onClick={openFile(gdiTransactionDataIndex.dataTemplateContentType, gdiTransactionDataIndex.dataTemplate)}>
-                            Open &nbsp;
-                          </a>
-                        ) : null}
-                        <span>
-                          {gdiTransactionDataIndex.dataTemplateContentType}, {byteSize(gdiTransactionDataIndex.dataTemplate)}
-                        </span>
-                      </div>
-                    ) : null}
+                    {gdiTransactionDataIndex.businessTeam ? (
+                      <Link to={`/business-team/${gdiTransactionDataIndex.businessTeam.id}`}>
+                        {gdiTransactionDataIndex.businessTeam.businessTeam}
+                      </Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>
+                    {gdiTransactionDataIndex.dataSetTemplate ? (
+                      <Link to={`/business-document/${gdiTransactionDataIndex.dataSetTemplate.id}`}>
+                        {gdiTransactionDataIndex.dataSetTemplate.documentTitle}
+                      </Link>
+                    ) : (
+                      ''
+                    )}
                   </td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

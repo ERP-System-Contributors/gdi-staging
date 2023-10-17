@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, ValidatedField, ValidatedForm, ValidatedBlobField } from 'react-jhipster';
+import { isNumber, ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
@@ -10,6 +10,12 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IGdiMasterDataIndex } from 'app/shared/model/gdi/gdi-master-data-index.model';
 import { getEntities as getGdiMasterDataIndices } from 'app/entities/gdi/gdi-master-data-index/gdi-master-data-index.reducer';
+import { IBusinessTeam } from 'app/shared/model/people/business-team.model';
+import { getEntities as getBusinessTeams } from 'app/entities/people/business-team/business-team.reducer';
+import { IBusinessDocument } from 'app/shared/model/documentation/business-document.model';
+import { getEntities as getBusinessDocuments } from 'app/entities/documentation/business-document/business-document.reducer';
+import { IPlaceholder } from 'app/shared/model/system/placeholder.model';
+import { getEntities as getPlaceholders } from 'app/entities/system/placeholder/placeholder.reducer';
 import { IGdiTransactionDataIndex } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
 import { UpdateFrequencyTypes } from 'app/shared/model/enumerations/update-frequency-types.model';
 import { DatasetBehaviorTypes } from 'app/shared/model/enumerations/dataset-behavior-types.model';
@@ -24,6 +30,9 @@ export const GdiTransactionDataIndexUpdate = () => {
   const isNew = id === undefined;
 
   const gdiMasterDataIndices = useAppSelector(state => state.gdiMasterDataIndex.entities);
+  const businessTeams = useAppSelector(state => state.businessTeam.entities);
+  const businessDocuments = useAppSelector(state => state.businessDocument.entities);
+  const placeholders = useAppSelector(state => state.placeholder.entities);
   const gdiTransactionDataIndexEntity = useAppSelector(state => state.gdiTransactionDataIndex.entity);
   const loading = useAppSelector(state => state.gdiTransactionDataIndex.loading);
   const updating = useAppSelector(state => state.gdiTransactionDataIndex.updating);
@@ -43,6 +52,9 @@ export const GdiTransactionDataIndexUpdate = () => {
     }
 
     dispatch(getGdiMasterDataIndices({}));
+    dispatch(getBusinessTeams({}));
+    dispatch(getBusinessDocuments({}));
+    dispatch(getPlaceholders({}));
   }, []);
 
   useEffect(() => {
@@ -56,6 +68,9 @@ export const GdiTransactionDataIndexUpdate = () => {
       ...gdiTransactionDataIndexEntity,
       ...values,
       masterDataItems: mapIdList(values.masterDataItems),
+      placeholders: mapIdList(values.placeholders),
+      businessTeam: businessTeams.find(it => it.id.toString() === values.businessTeam.toString()),
+      dataSetTemplate: businessDocuments.find(it => it.id.toString() === values.dataSetTemplate.toString()),
     };
 
     if (isNew) {
@@ -73,6 +88,9 @@ export const GdiTransactionDataIndexUpdate = () => {
           datasetBehavior: 'INSERT_AND_UPDATE',
           ...gdiTransactionDataIndexEntity,
           masterDataItems: gdiTransactionDataIndexEntity?.masterDataItems?.map(e => e.id.toString()),
+          businessTeam: gdiTransactionDataIndexEntity?.businessTeam?.id,
+          dataSetTemplate: gdiTransactionDataIndexEntity?.dataSetTemplate?.id,
+          placeholders: gdiTransactionDataIndexEntity?.placeholders?.map(e => e.id.toString()),
         };
 
   return (
@@ -160,13 +178,6 @@ export const GdiTransactionDataIndexUpdate = () => {
                 data-cy="datasetDescription"
                 type="textarea"
               />
-              <ValidatedBlobField
-                label="Data Template"
-                id="gdi-transaction-data-index-dataTemplate"
-                name="dataTemplate"
-                data-cy="dataTemplate"
-                openActionLabel="Open"
-              />
               <ValidatedField label="Data Path" id="gdi-transaction-data-index-dataPath" name="dataPath" data-cy="dataPath" type="text" />
               <ValidatedField
                 label="Master Data Item"
@@ -181,6 +192,55 @@ export const GdiTransactionDataIndexUpdate = () => {
                   ? gdiMasterDataIndices.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
                         {otherEntity.entityName}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="gdi-transaction-data-index-businessTeam"
+                name="businessTeam"
+                data-cy="businessTeam"
+                label="Business Team"
+                type="select"
+              >
+                <option value="" key="0" />
+                {businessTeams
+                  ? businessTeams.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.businessTeam}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="gdi-transaction-data-index-dataSetTemplate"
+                name="dataSetTemplate"
+                data-cy="dataSetTemplate"
+                label="Data Set Template"
+                type="select"
+              >
+                <option value="" key="0" />
+                {businessDocuments
+                  ? businessDocuments.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.documentTitle}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                label="Placeholder"
+                id="gdi-transaction-data-index-placeholder"
+                data-cy="placeholder"
+                type="select"
+                multiple
+                name="placeholders"
+              >
+                <option value="" key="0" />
+                {placeholders
+                  ? placeholders.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.description}
                       </option>
                     ))
                   : null}

@@ -8,10 +8,12 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiMasterDataIndex } from 'app/shared/model/gdi/gdi-master-data-index.model';
-import { getEntity, updateEntity, createEntity, reset } from './gdi-master-data-index.reducer';
+import { IUser } from 'app/shared/model/user.model';
+import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
+import { IBusinessTeam } from 'app/shared/model/people/business-team.model';
+import { getEntity, updateEntity, createEntity, reset } from './business-team.reducer';
 
-export const GdiMasterDataIndexUpdate = () => {
+export const BusinessTeamUpdate = () => {
   const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
@@ -19,13 +21,14 @@ export const GdiMasterDataIndexUpdate = () => {
   const { id } = useParams<'id'>();
   const isNew = id === undefined;
 
-  const gdiMasterDataIndexEntity = useAppSelector(state => state.gdiMasterDataIndex.entity);
-  const loading = useAppSelector(state => state.gdiMasterDataIndex.loading);
-  const updating = useAppSelector(state => state.gdiMasterDataIndex.updating);
-  const updateSuccess = useAppSelector(state => state.gdiMasterDataIndex.updateSuccess);
+  const users = useAppSelector(state => state.userManagement.users);
+  const businessTeamEntity = useAppSelector(state => state.businessTeam.entity);
+  const loading = useAppSelector(state => state.businessTeam.loading);
+  const updating = useAppSelector(state => state.businessTeam.updating);
+  const updateSuccess = useAppSelector(state => state.businessTeam.updateSuccess);
 
   const handleClose = () => {
-    navigate('/gdi-master-data-index' + location.search);
+    navigate('/business-team' + location.search);
   };
 
   useEffect(() => {
@@ -34,6 +37,8 @@ export const GdiMasterDataIndexUpdate = () => {
     } else {
       dispatch(getEntity(id));
     }
+
+    dispatch(getUsers({}));
   }, []);
 
   useEffect(() => {
@@ -44,8 +49,9 @@ export const GdiMasterDataIndexUpdate = () => {
 
   const saveEntity = values => {
     const entity = {
-      ...gdiMasterDataIndexEntity,
+      ...businessTeamEntity,
       ...values,
+      teamMembers: users.find(it => it.id.toString() === values.teamMembers.toString()),
     };
 
     if (isNew) {
@@ -59,15 +65,16 @@ export const GdiMasterDataIndexUpdate = () => {
     isNew
       ? {}
       : {
-          ...gdiMasterDataIndexEntity,
+          ...businessTeamEntity,
+          teamMembers: businessTeamEntity?.teamMembers?.id,
         };
 
   return (
     <div>
       <Row className="justify-content-center">
         <Col md="8">
-          <h2 id="gdiStagingApp.gdiGdiMasterDataIndex.home.createOrEditLabel" data-cy="GdiMasterDataIndexCreateUpdateHeading">
-            Create or edit a Gdi Master Data Index
+          <h2 id="gdiStagingApp.peopleBusinessTeam.home.createOrEditLabel" data-cy="BusinessTeamCreateUpdateHeading">
+            Create or edit a Business Team
           </h2>
         </Col>
       </Row>
@@ -78,37 +85,29 @@ export const GdiMasterDataIndexUpdate = () => {
           ) : (
             <ValidatedForm defaultValues={defaultValues()} onSubmit={saveEntity}>
               {!isNew ? (
-                <ValidatedField name="id" required readOnly id="gdi-master-data-index-id" label="ID" validate={{ required: true }} />
+                <ValidatedField name="id" required readOnly id="business-team-id" label="ID" validate={{ required: true }} />
               ) : null}
               <ValidatedField
-                label="Entity Name"
-                id="gdi-master-data-index-entityName"
-                name="entityName"
-                data-cy="entityName"
+                label="Business Team"
+                id="business-team-businessTeam"
+                name="businessTeam"
+                data-cy="businessTeam"
                 type="text"
                 validate={{
                   required: { value: true, message: 'This field is required.' },
                 }}
               />
-              <ValidatedField
-                label="Database Name"
-                id="gdi-master-data-index-databaseName"
-                name="databaseName"
-                data-cy="databaseName"
-                type="text"
-                validate={{
-                  required: { value: true, message: 'This field is required.' },
-                }}
-              />
-              <ValidatedField
-                label="Business Description"
-                id="gdi-master-data-index-businessDescription"
-                name="businessDescription"
-                data-cy="businessDescription"
-                type="textarea"
-              />
-              <ValidatedField label="Data Path" id="gdi-master-data-index-dataPath" name="dataPath" data-cy="dataPath" type="text" />
-              <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/gdi-master-data-index" replace color="info">
+              <ValidatedField id="business-team-teamMembers" name="teamMembers" data-cy="teamMembers" label="Team Members" type="select">
+                <option value="" key="0" />
+                {users
+                  ? users.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.login}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/business-team" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">Back</span>
@@ -126,4 +125,4 @@ export const GdiMasterDataIndexUpdate = () => {
   );
 };
 
-export default GdiMasterDataIndexUpdate;
+export default BusinessTeamUpdate;

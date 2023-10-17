@@ -31,9 +31,9 @@ import reducer, {
   updateEntity,
   partialUpdateEntity,
   reset,
-} from './gdi-master-data-index.reducer';
+} from './business-team.reducer';
 import { EntityState } from 'app/shared/reducers/reducer.utils';
-import { IGdiMasterDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-master-data-index.model';
+import { IBusinessTeam, defaultValue } from 'app/shared/model/people/business-team.model';
 
 describe('Entities reducer tests', () => {
   function isEmpty(element): boolean {
@@ -44,7 +44,7 @@ describe('Entities reducer tests', () => {
     }
   }
 
-  const initialState: EntityState<IGdiMasterDataIndex> = {
+  const initialState: EntityState<IBusinessTeam> = {
     loading: false,
     errorMessage: null,
     entities: [],
@@ -222,7 +222,7 @@ describe('Entities reducer tests', () => {
       axios.delete = sinon.stub().returns(Promise.resolve(resolvedObject));
     });
 
-    it('dispatches FETCH_GDIMASTERDATAINDEX_LIST actions', async () => {
+    it('dispatches FETCH_BUSINESSTEAM_LIST actions', async () => {
       const expectedActions = [
         {
           type: getEntities.pending.type,
@@ -236,7 +236,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[0]).toMatchObject(expectedActions[0]);
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
-    it('dispatches SEARCH_GDIMASTERDATAINDICES actions', async () => {
+    it('dispatches SEARCH_BUSINESSTEAMS actions', async () => {
       const expectedActions = [
         {
           type: searchEntities.pending.type,
@@ -251,7 +251,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
 
-    it('dispatches FETCH_GDIMASTERDATAINDEX actions', async () => {
+    it('dispatches FETCH_BUSINESSTEAM actions', async () => {
       const expectedActions = [
         {
           type: getEntity.pending.type,
@@ -266,7 +266,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
 
-    it('dispatches CREATE_GDIMASTERDATAINDEX actions', async () => {
+    it('dispatches CREATE_BUSINESSTEAM actions', async () => {
       const expectedActions = [
         {
           type: createEntity.pending.type,
@@ -285,7 +285,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
     });
 
-    it('dispatches UPDATE_GDIMASTERDATAINDEX actions', async () => {
+    it('dispatches UPDATE_BUSINESSTEAM actions', async () => {
       const expectedActions = [
         {
           type: updateEntity.pending.type,
@@ -304,7 +304,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
     });
 
-    it('dispatches PARTIAL_UPDATE_GDIMASTERDATAINDEX actions', async () => {
+    it('dispatches PARTIAL_UPDATE_BUSINESSTEAM actions', async () => {
       const expectedActions = [
         {
           type: partialUpdateEntity.pending.type,
@@ -323,7 +323,7 @@ describe('Entities reducer tests', () => {
       expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
     });
 
-    it('dispatches DELETE_GDIMASTERDATAINDEX actions', async () => {
+    it('dispatches DELETE_BUSINESSTEAM actions', async () => {
       const expectedActions = [
         {
           type: deleteEntity.pending.type,

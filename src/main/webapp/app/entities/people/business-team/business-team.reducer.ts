@@ -21,9 +21,9 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IGdiTransactionDataIndex, defaultValue } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
+import { IBusinessTeam, defaultValue } from 'app/shared/model/people/business-team.model';
 
-const initialState: EntityState<IGdiTransactionDataIndex> = {
+const initialState: EntityState<IBusinessTeam> = {
   loading: false,
   errorMessage: null,
   entities: [],
@@ -33,37 +33,34 @@ const initialState: EntityState<IGdiTransactionDataIndex> = {
   updateSuccess: false,
 };
 
-const apiUrl = 'api/gdi-transaction-data-indices';
-const apiSearchUrl = 'api/_search/gdi-transaction-data-indices';
+const apiUrl = 'api/business-teams';
+const apiSearchUrl = 'api/_search/business-teams';
 
 // Actions
 
-export const searchEntities = createAsyncThunk(
-  'gdiTransactionDataIndex/search_entity',
-  async ({ query, page, size, sort }: IQueryParams) => {
-    const requestUrl = `${apiSearchUrl}?query=${query}${sort ? `&page=${page}&size=${size}&sort=${sort}` : ''}`;
-    return axios.get<IGdiTransactionDataIndex[]>(requestUrl);
-  }
-);
+export const searchEntities = createAsyncThunk('businessTeam/search_entity', async ({ query, page, size, sort }: IQueryParams) => {
+  const requestUrl = `${apiSearchUrl}?query=${query}${sort ? `&page=${page}&size=${size}&sort=${sort}` : ''}`;
+  return axios.get<IBusinessTeam[]>(requestUrl);
+});
 
-export const getEntities = createAsyncThunk('gdiTransactionDataIndex/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
+export const getEntities = createAsyncThunk('businessTeam/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
   const requestUrl = `${apiUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}&` : '?'}cacheBuster=${new Date().getTime()}`;
-  return axios.get<IGdiTransactionDataIndex[]>(requestUrl);
+  return axios.get<IBusinessTeam[]>(requestUrl);
 });
 
 export const getEntity = createAsyncThunk(
-  'gdiTransactionDataIndex/fetch_entity',
+  'businessTeam/fetch_entity',
   async (id: string | number) => {
     const requestUrl = `${apiUrl}/${id}`;
-    return axios.get<IGdiTransactionDataIndex>(requestUrl);
+    return axios.get<IBusinessTeam>(requestUrl);
   },
   { serializeError: serializeAxiosError }
 );
 
 export const createEntity = createAsyncThunk(
-  'gdiTransactionDataIndex/create_entity',
-  async (entity: IGdiTransactionDataIndex, thunkAPI) => {
-    const result = await axios.post<IGdiTransactionDataIndex>(apiUrl, cleanEntity(entity));
+  'businessTeam/create_entity',
+  async (entity: IBusinessTeam, thunkAPI) => {
+    const result = await axios.post<IBusinessTeam>(apiUrl, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -71,9 +68,9 @@ export const createEntity = createAsyncThunk(
 );
 
 export const updateEntity = createAsyncThunk(
-  'gdiTransactionDataIndex/update_entity',
-  async (entity: IGdiTransactionDataIndex, thunkAPI) => {
-    const result = await axios.put<IGdiTransactionDataIndex>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'businessTeam/update_entity',
+  async (entity: IBusinessTeam, thunkAPI) => {
+    const result = await axios.put<IBusinessTeam>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -81,9 +78,9 @@ export const updateEntity = createAsyncThunk(
 );
 
 export const partialUpdateEntity = createAsyncThunk(
-  'gdiTransactionDataIndex/partial_update_entity',
-  async (entity: IGdiTransactionDataIndex, thunkAPI) => {
-    const result = await axios.patch<IGdiTransactionDataIndex>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'businessTeam/partial_update_entity',
+  async (entity: IBusinessTeam, thunkAPI) => {
+    const result = await axios.patch<IBusinessTeam>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -91,10 +88,10 @@ export const partialUpdateEntity = createAsyncThunk(
 );
 
 export const deleteEntity = createAsyncThunk(
-  'gdiTransactionDataIndex/delete_entity',
+  'businessTeam/delete_entity',
   async (id: string | number, thunkAPI) => {
     const requestUrl = `${apiUrl}/${id}`;
-    const result = await axios.delete<IGdiTransactionDataIndex>(requestUrl);
+    const result = await axios.delete<IBusinessTeam>(requestUrl);
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -103,8 +100,8 @@ export const deleteEntity = createAsyncThunk(
 
 // slice
 
-export const GdiTransactionDataIndexSlice = createEntitySlice({
-  name: 'gdiTransactionDataIndex',
+export const BusinessTeamSlice = createEntitySlice({
+  name: 'businessTeam',
   initialState,
   extraReducers(builder) {
     builder
@@ -146,7 +143,7 @@ export const GdiTransactionDataIndexSlice = createEntitySlice({
   },
 });
 
-export const { reset } = GdiTransactionDataIndexSlice.actions;
+export const { reset } = BusinessTeamSlice.actions;
 
 // Reducer
-export default GdiTransactionDataIndexSlice.reducer;
+export default BusinessTeamSlice.reducer;

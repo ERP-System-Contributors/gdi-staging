@@ -217,6 +217,7 @@ import CardUsageInformation from './gdi-data/card-usage-information';
 import CollateralInformation from './gdi-data/collateral-information';
 import CreditCardFacility from './gdi-data/credit-card-facility';
 import CardState from './gdi-data/card-state';
+import BusinessTeam from './people/business-team';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {
@@ -438,6 +439,7 @@ export default () => {
         <Route path="collateral-information/*" element={<CollateralInformation />} />
         <Route path="credit-card-facility/*" element={<CreditCardFacility />} />
         <Route path="card-state/*" element={<CardState />} />
+        <Route path="business-team/*" element={<BusinessTeam />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </ErrorBoundaryRoutes>
     </div>

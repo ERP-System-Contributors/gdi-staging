@@ -39,11 +39,6 @@
       "fieldTypeBlobContent": "text"
     },
     {
-      "fieldName": "dataTemplate",
-      "fieldType": "byte[]",
-      "fieldTypeBlobContent": "any"
-    },
-    {
       "fieldName": "dataPath",
       "fieldType": "String"
     }
@@ -60,6 +55,29 @@
       "otherEntityRelationshipName": "gdiTransactionDataIndex",
       "ownerSide": true,
       "relationshipName": "masterDataItem",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "businessTeam",
+      "otherEntityName": "businessTeam",
+      "relationshipName": "businessTeam",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "id": false,
+      "otherEntityField": "documentTitle",
+      "otherEntityName": "businessDocument",
+      "otherEntityRelationshipName": "gdiTransactionDataIndex",
+      "ownerSide": true,
+      "relationshipName": "dataSetTemplate",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "description",
+      "otherEntityName": "placeholder",
+      "otherEntityRelationshipName": "gdiTransactionDataIndex",
+      "ownerSide": true,
+      "relationshipName": "placeholder",
       "relationshipType": "many-to-many"
     }
   ],

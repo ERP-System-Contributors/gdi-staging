@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Input, InputGroup, FormGroup, Form, Row, Col, Table } from 'reactstrap';
-import { byteSize, translate, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
+import { translate, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
@@ -9,10 +9,10 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiMasterDataIndex } from 'app/shared/model/gdi/gdi-master-data-index.model';
-import { searchEntities, getEntities } from './gdi-master-data-index.reducer';
+import { IBusinessTeam } from 'app/shared/model/people/business-team.model';
+import { searchEntities, getEntities } from './business-team.reducer';
 
-export const GdiMasterDataIndex = () => {
+export const BusinessTeam = () => {
   const dispatch = useAppDispatch();
 
   const location = useLocation();
@@ -23,9 +23,9 @@ export const GdiMasterDataIndex = () => {
     overridePaginationStateWithQueryParams(getSortState(location, ITEMS_PER_PAGE, 'id'), location.search)
   );
 
-  const gdiMasterDataIndexList = useAppSelector(state => state.gdiMasterDataIndex.entities);
-  const loading = useAppSelector(state => state.gdiMasterDataIndex.loading);
-  const totalItems = useAppSelector(state => state.gdiMasterDataIndex.totalItems);
+  const businessTeamList = useAppSelector(state => state.businessTeam.entities);
+  const loading = useAppSelector(state => state.businessTeam.loading);
+  const totalItems = useAppSelector(state => state.businessTeam.totalItems);
 
   const getAllEntities = () => {
     if (search) {
@@ -124,20 +124,15 @@ export const GdiMasterDataIndex = () => {
 
   return (
     <div>
-      <h2 id="gdi-master-data-index-heading" data-cy="GdiMasterDataIndexHeading">
-        Gdi Master Data Indices
+      <h2 id="business-team-heading" data-cy="BusinessTeamHeading">
+        Business Teams
         <div className="d-flex justify-content-end">
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} /> Refresh list
           </Button>
-          <Link
-            to="/gdi-master-data-index/new"
-            className="btn btn-primary jh-create-entity"
-            id="jh-create-entity"
-            data-cy="entityCreateButton"
-          >
+          <Link to="/business-team/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
             <FontAwesomeIcon icon="plus" />
-            &nbsp; Create a new Gdi Master Data Index
+            &nbsp; Create a new Business Team
           </Link>
         </div>
       </h2>
@@ -159,54 +154,40 @@ export const GdiMasterDataIndex = () => {
         </Col>
       </Row>
       <div className="table-responsive">
-        {gdiMasterDataIndexList && gdiMasterDataIndexList.length > 0 ? (
+        {businessTeamList && businessTeamList.length > 0 ? (
           <Table responsive>
             <thead>
               <tr>
                 <th className="hand" onClick={sort('id')}>
                   ID <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('entityName')}>
-                  Entity Name <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('businessTeam')}>
+                  Business Team <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('databaseName')}>
-                  Database Name <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={sort('businessDescription')}>
-                  Business Description <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={sort('dataPath')}>
-                  Data Path <FontAwesomeIcon icon="sort" />
+                <th>
+                  Team Members <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
             </thead>
             <tbody>
-              {gdiMasterDataIndexList.map((gdiMasterDataIndex, i) => (
+              {businessTeamList.map((businessTeam, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
                   <td>
-                    <Button tag={Link} to={`/gdi-master-data-index/${gdiMasterDataIndex.id}`} color="link" size="sm">
-                      {gdiMasterDataIndex.id}
+                    <Button tag={Link} to={`/business-team/${businessTeam.id}`} color="link" size="sm">
+                      {businessTeam.id}
                     </Button>
                   </td>
-                  <td>{gdiMasterDataIndex.entityName}</td>
-                  <td>{gdiMasterDataIndex.databaseName}</td>
-                  <td>{gdiMasterDataIndex.businessDescription}</td>
-                  <td>{gdiMasterDataIndex.dataPath}</td>
+                  <td>{businessTeam.businessTeam}</td>
+                  <td>{businessTeam.teamMembers ? businessTeam.teamMembers.login : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
-                      <Button
-                        tag={Link}
-                        to={`/gdi-master-data-index/${gdiMasterDataIndex.id}`}
-                        color="info"
-                        size="sm"
-                        data-cy="entityDetailsButton"
-                      >
+                      <Button tag={Link} to={`/business-team/${businessTeam.id}`} color="info" size="sm" data-cy="entityDetailsButton">
                         <FontAwesomeIcon icon="eye" /> <span className="d-none d-md-inline">View</span>
                       </Button>
                       <Button
                         tag={Link}
-                        to={`/gdi-master-data-index/${gdiMasterDataIndex.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
+                        to={`/business-team/${businessTeam.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
@@ -215,7 +196,7 @@ export const GdiMasterDataIndex = () => {
                       </Button>
                       <Button
                         tag={Link}
-                        to={`/gdi-master-data-index/${gdiMasterDataIndex.id}/delete?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
+                        to={`/business-team/${businessTeam.id}/delete?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
                         color="danger"
                         size="sm"
                         data-cy="entityDeleteButton"
@@ -229,11 +210,11 @@ export const GdiMasterDataIndex = () => {
             </tbody>
           </Table>
         ) : (
-          !loading && <div className="alert alert-warning">No Gdi Master Data Indices found</div>
+          !loading && <div className="alert alert-warning">No Business Teams found</div>
         )}
       </div>
       {totalItems ? (
-        <div className={gdiMasterDataIndexList && gdiMasterDataIndexList.length > 0 ? '' : 'd-none'}>
+        <div className={businessTeamList && businessTeamList.length > 0 ? '' : 'd-none'}>
           <div className="justify-content-center d-flex">
             <JhiItemCount page={paginationState.activePage} total={totalItems} itemsPerPage={paginationState.itemsPerPage} />
           </div>
@@ -254,4 +235,4 @@ export const GdiMasterDataIndex = () => {
   );
 };
 
-export default GdiMasterDataIndex;
+export default BusinessTeam;

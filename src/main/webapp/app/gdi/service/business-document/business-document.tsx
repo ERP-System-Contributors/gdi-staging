@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Input, InputGroup, FormGroup, Form, Row, Col, Table } from 'reactstrap';
-import { byteSize, translate, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
+import { openFile, byteSize, translate, TextFormat, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
@@ -9,10 +9,10 @@ import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.cons
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
-import { IGdiTransactionDataIndex } from 'app/shared/model/gdi/gdi-transaction-data-index.model';
-import { searchEntities, getEntities } from './gdi-transaction-data-index.reducer';
+import { IBusinessDocument } from 'app/shared/model/documentation/business-document.model';
+import { searchEntities, getEntities } from './business-document.reducer';
 
-export const GdiTransactionDataIndex = () => {
+export const BusinessDocument = () => {
   const dispatch = useAppDispatch();
 
   const location = useLocation();
@@ -23,9 +23,9 @@ export const GdiTransactionDataIndex = () => {
     overridePaginationStateWithQueryParams(getSortState(location, ITEMS_PER_PAGE, 'id'), location.search)
   );
 
-  const gdiTransactionDataIndexList = useAppSelector(state => state.gdiTransactionDataIndex.entities);
-  const loading = useAppSelector(state => state.gdiTransactionDataIndex.loading);
-  const totalItems = useAppSelector(state => state.gdiTransactionDataIndex.totalItems);
+  const businessDocumentList = useAppSelector(state => state.businessDocument.entities);
+  const loading = useAppSelector(state => state.businessDocument.loading);
+  const totalItems = useAppSelector(state => state.businessDocument.totalItems);
 
   const getAllEntities = () => {
     if (search) {
@@ -124,20 +124,15 @@ export const GdiTransactionDataIndex = () => {
 
   return (
     <div>
-      <h2 id="gdi-transaction-data-index-heading" data-cy="GdiTransactionDataIndexHeading">
-        Gdi Transaction Data Indices
+      <h2 id="business-document-heading" data-cy="BusinessDocumentHeading">
+        Business Documents
         <div className="d-flex justify-content-end">
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} /> Refresh list
           </Button>
-          <Link
-            to="/gdi-transaction-data-index/new"
-            className="btn btn-primary jh-create-entity"
-            id="jh-create-entity"
-            data-cy="entityCreateButton"
-          >
+          <Link to="/business-document/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
             <FontAwesomeIcon icon="plus" />
-            &nbsp; Create a new Gdi Transaction Data Index
+            &nbsp; Create a new Business Document
           </Link>
         </div>
       </h2>
@@ -159,75 +154,126 @@ export const GdiTransactionDataIndex = () => {
         </Col>
       </Row>
       <div className="table-responsive">
-        {gdiTransactionDataIndexList && gdiTransactionDataIndexList.length > 0 ? (
+        {businessDocumentList && businessDocumentList.length > 0 ? (
           <Table responsive>
             <thead>
               <tr>
                 <th className="hand" onClick={sort('id')}>
                   ID <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('datasetName')}>
-                  Dataset Name <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('documentTitle')}>
+                  Document Title <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('databaseName')}>
-                  Database Name <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('description')}>
+                  Description <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('updateFrequency')}>
-                  Update Frequency <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('documentSerial')}>
+                  Document Serial <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('datasetBehavior')}>
-                  Dataset Behavior <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('lastModified')}>
+                  Last Modified <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('minimumDataRowsPerRequest')}>
-                  Minimum Data Rows Per Request <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('attachmentFilePath')}>
+                  Attachment File Path <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('maximumDataRowsPerRequest')}>
-                  Maximum Data Rows Per Request <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('documentFile')}>
+                  Document File <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('datasetDescription')}>
-                  Dataset Description <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('fileTampered')}>
+                  File Tampered <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('dataPath')}>
-                  Data Path <FontAwesomeIcon icon="sort" />
-                </th>
-                <th>
-                  Business Team <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('documentFileChecksum')}>
+                  Document File Checksum <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  Data Set Template <FontAwesomeIcon icon="sort" />
+                  Created By <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  Last Modified By <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  Originating Department <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  File Checksum Algorithm <FontAwesomeIcon icon="sort" />
+                </th>
+                <th>
+                  Security Clearance <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
             </thead>
             <tbody>
-              {gdiTransactionDataIndexList.map((gdiTransactionDataIndex, i) => (
+              {businessDocumentList.map((businessDocument, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
                   <td>
-                    <Button tag={Link} to={`/gdi-transaction-data-index/${gdiTransactionDataIndex.id}`} color="link" size="sm">
-                      {gdiTransactionDataIndex.id}
+                    <Button tag={Link} to={`/business-document/${businessDocument.id}`} color="link" size="sm">
+                      {businessDocument.id}
                     </Button>
                   </td>
-                  <td>{gdiTransactionDataIndex.datasetName}</td>
-                  <td>{gdiTransactionDataIndex.databaseName}</td>
-                  <td>{gdiTransactionDataIndex.updateFrequency}</td>
-                  <td>{gdiTransactionDataIndex.datasetBehavior}</td>
-                  <td>{gdiTransactionDataIndex.minimumDataRowsPerRequest}</td>
-                  <td>{gdiTransactionDataIndex.maximumDataRowsPerRequest}</td>
-                  <td>{gdiTransactionDataIndex.datasetDescription}</td>
-                  <td>{gdiTransactionDataIndex.dataPath}</td>
+                  <td>{businessDocument.documentTitle}</td>
+                  <td>{businessDocument.description}</td>
+                  <td>{businessDocument.documentSerial}</td>
                   <td>
-                    {gdiTransactionDataIndex.businessTeam ? (
-                      <Link to={`/business-team/${gdiTransactionDataIndex.businessTeam.id}`}>
-                        {gdiTransactionDataIndex.businessTeam.businessTeam}
+                    {businessDocument.lastModified ? (
+                      <TextFormat type="date" value={businessDocument.lastModified} format={APP_DATE_FORMAT} />
+                    ) : null}
+                  </td>
+                  <td>{businessDocument.attachmentFilePath}</td>
+                  <td>
+                    {businessDocument.documentFile ? (
+                      <div>
+                        {businessDocument.documentFileContentType ? (
+                          <a onClick={openFile(businessDocument.documentFileContentType, businessDocument.documentFile)}>Open &nbsp;</a>
+                        ) : null}
+                        <span>
+                          {businessDocument.documentFileContentType}, {byteSize(businessDocument.documentFile)}
+                        </span>
+                      </div>
+                    ) : null}
+                  </td>
+                  <td>{businessDocument.fileTampered ? 'true' : 'false'}</td>
+                  <td>{businessDocument.documentFileChecksum}</td>
+                  <td>
+                    {businessDocument.createdBy ? (
+                      <Link to={`/application-user/${businessDocument.createdBy.id}`}>
+                        {businessDocument.createdBy.applicationIdentity}
                       </Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
-                    {gdiTransactionDataIndex.dataSetTemplate ? (
-                      <Link to={`/business-document/${gdiTransactionDataIndex.dataSetTemplate.id}`}>
-                        {gdiTransactionDataIndex.dataSetTemplate.documentTitle}
+                    {businessDocument.lastModifiedBy ? (
+                      <Link to={`/application-user/${businessDocument.lastModifiedBy.id}`}>
+                        {businessDocument.lastModifiedBy.applicationIdentity}
+                      </Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>
+                    {businessDocument.originatingDepartment ? (
+                      <Link to={`/dealer/${businessDocument.originatingDepartment.id}`}>
+                        {businessDocument.originatingDepartment.dealerName}
+                      </Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>
+                    {businessDocument.fileChecksumAlgorithm ? (
+                      <Link to={`/algorithm/${businessDocument.fileChecksumAlgorithm.id}`}>
+                        {businessDocument.fileChecksumAlgorithm.name}
+                      </Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>
+                    {businessDocument.securityClearance ? (
+                      <Link to={`/security-clearance/${businessDocument.securityClearance.id}`}>
+                        {businessDocument.securityClearance.clearanceLevel}
                       </Link>
                     ) : (
                       ''
@@ -237,7 +283,7 @@ export const GdiTransactionDataIndex = () => {
                     <div className="btn-group flex-btn-group-container">
                       <Button
                         tag={Link}
-                        to={`/gdi-transaction-data-index/${gdiTransactionDataIndex.id}`}
+                        to={`/business-document/${businessDocument.id}`}
                         color="info"
                         size="sm"
                         data-cy="entityDetailsButton"
@@ -246,7 +292,7 @@ export const GdiTransactionDataIndex = () => {
                       </Button>
                       <Button
                         tag={Link}
-                        to={`/gdi-transaction-data-index/${gdiTransactionDataIndex.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
+                        to={`/business-document/${businessDocument.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
                         color="primary"
                         size="sm"
                         data-cy="entityEditButton"
@@ -255,7 +301,7 @@ export const GdiTransactionDataIndex = () => {
                       </Button>
                       <Button
                         tag={Link}
-                        to={`/gdi-transaction-data-index/${gdiTransactionDataIndex.id}/delete?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
+                        to={`/business-document/${businessDocument.id}/delete?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
                         color="danger"
                         size="sm"
                         data-cy="entityDeleteButton"
@@ -269,11 +315,11 @@ export const GdiTransactionDataIndex = () => {
             </tbody>
           </Table>
         ) : (
-          !loading && <div className="alert alert-warning">No Gdi Transaction Data Indices found</div>
+          !loading && <div className="alert alert-warning">No Business Documents found</div>
         )}
       </div>
       {totalItems ? (
-        <div className={gdiTransactionDataIndexList && gdiTransactionDataIndexList.length > 0 ? '' : 'd-none'}>
+        <div className={businessDocumentList && businessDocumentList.length > 0 ? '' : 'd-none'}>
           <div className="justify-content-center d-flex">
             <JhiItemCount page={paginationState.activePage} total={totalItems} itemsPerPage={paginationState.itemsPerPage} />
           </div>
@@ -294,4 +340,4 @@ export const GdiTransactionDataIndex = () => {
   );
 };
 
-export default GdiTransactionDataIndex;
+export default BusinessDocument;
